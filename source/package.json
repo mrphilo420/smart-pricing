@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "explain": "node --env-file=.env scripts/local-explain-server.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.68.0",
@@ -14,11 +15,15 @@
     "react-dom": "^19.3.1"
   },
   "devDependencies": {
+    "@parcel/config-default": "^2.16.4",
     "@types/node": "^24.19.2",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",
     "autoprefixer": "^10.6.2",
+    "html-inline": "^1.2.0",
+    "parcel": "^2.16.4",
+    "parcel-resolver-tspaths": "^0.0.9",
     "postcss": "^8.5.32",
     "tailwindcss": "3.4.1",
     "tailwindcss-animate": "^1.0.7",

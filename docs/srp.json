@@ -1,0 +1,1314 @@
+{
+  "source": "DTI SRP BNPC bulletins",
+  "note": "Real Philippine suggested retail prices. Reference only, not a legal ceiling unless a specific instrument applies.",
+  "categories": [
+    {
+      "category": "BATTERIES",
+      "date": "2026-05-11",
+      "count": 2,
+      "min": 81.75,
+      "median": 149.25,
+      "max": 216.75,
+      "products": [
+        {
+          "product": "Eveready Super Heavy Duty Black – Blister Pack of 2",
+          "unit": "D",
+          "srp": 81.75,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Energizer Max – Blister Pack of 4",
+          "unit": "AA",
+          "srp": 216.75,
+          "date": "2026-05-11"
+        }
+      ]
+    },
+    {
+      "category": "BEEF LOAF",
+      "date": "2026-05-11",
+      "count": 8,
+      "min": 18.15,
+      "median": 20.63,
+      "max": 25.0,
+      "products": [
+        {
+          "product": "Purefoods",
+          "unit": "150g",
+          "srp": 18.15,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "555",
+          "unit": "150g",
+          "srp": 19.5,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Bingo",
+          "unit": "150g",
+          "srp": 19.5,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "El Rancho – SMKT",
+          "unit": "155g",
+          "srp": 19.5,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "CDO",
+          "unit": "150g",
+          "srp": 21.75,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Argentina",
+          "unit": "150g",
+          "srp": 22.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Purefoods",
+          "unit": "200g",
+          "srp": 24.9,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Argentina",
+          "unit": "170g",
+          "srp": 25.0,
+          "date": "2026-05-11"
+        }
+      ]
+    },
+    {
+      "category": "BREAD",
+      "date": "2026-05-11",
+      "count": 2,
+      "min": 27.25,
+      "median": 35.63,
+      "max": 44.0,
+      "products": [
+        {
+          "product": "Pinoy Pandesal (10pcs./pack)",
+          "unit": "250g",
+          "srp": 27.25,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Pinoy Tasty",
+          "unit": "450g",
+          "srp": 44.0,
+          "date": "2026-05-11"
+        }
+      ]
+    },
+    {
+      "category": "CANDLES",
+      "date": "2026-05-11",
+      "count": 22,
+      "min": 36.25,
+      "median": 62.61,
+      "max": 150.25,
+      "products": [
+        {
+          "product": "5-Star Esperma White (4pcs./pack)",
+          "unit": "#14",
+          "srp": 36.25,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Export Candles White (4pcs./pack)",
+          "unit": "#16",
+          "srp": 36.25,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Export Candles White (20pcs./pack)",
+          "unit": "#03",
+          "srp": 39.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Manila Wax Sperma White (20pcs./pack)",
+          "unit": "#04",
+          "srp": 47.74,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Manila Wax Sperma White (4pcs./pack)",
+          "unit": "#14",
+          "srp": 54.1,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Manila Wax Sperma White (10pcs./pack)",
+          "unit": "#02",
+          "srp": 54.11,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "5-Star Esperma White (20pcs./pack)",
+          "unit": "#03",
+          "srp": 54.25,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Manila Wax Votive White/Yellow (6pcs./pack)",
+          "unit": "#03",
+          "srp": 59.41,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Export Candles White (12pcs./pack)",
+          "unit": "#08",
+          "srp": 60.5,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Export Candles White (20pcs./pack)",
+          "unit": "#05",
+          "srp": 60.5,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Export Vigil Candles White/Yellow (12pcs./pack)",
+          "unit": "#01",
+          "srp": 60.5,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Manila Wax Sperma White (20pcs./pack)",
+          "unit": "#03",
+          "srp": 64.72,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Manila Wax Votive White/Yellow (6pcs./pack)",
+          "unit": "#02",
+          "srp": 71.09,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Export Candles White (10pcs./pack)",
+          "unit": "#10",
+          "srp": 72.75,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Export Candles White (10pcs./pack)",
+          "unit": "#12",
+          "srp": 72.75,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Export Candles White (8pcs./pack)",
+          "unit": "#14",
+          "srp": 72.75,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Liwanag Esperma Candle White (20pcs./pack)",
+          "unit": "#03",
+          "srp": 81.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Manila Wax Votive White/Yellow (6pcs./pack)",
+          "unit": "#01",
+          "srp": 82.76,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Export Candles White (20pcs./pack)",
+          "unit": "#06",
+          "srp": 85.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Liwanag Esperma Candle White (20pcs./pack)",
+          "unit": "#05",
+          "srp": 109.75,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "5-Star Esperma White (25pcs./pack)",
+          "unit": "#06",
+          "srp": 115.5,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "5-Star Esperma White (5pcs./pack)",
+          "unit": "#08",
+          "srp": 150.25,
+          "date": "2026-05-11"
+        }
+      ]
+    },
+    {
+      "category": "CANNED SARDINES IN TOMATO SAUCE",
+      "date": "2026-05-11",
+      "count": 11,
+      "min": 18.0,
+      "median": 22.5,
+      "max": 24.75,
+      "products": [
+        {
+          "product": "King Cup Regular Lid",
+          "unit": "155g",
+          "srp": 18.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Toyo Bonus Green EOC",
+          "unit": "155g",
+          "srp": 20.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "555 Bonus Pack",
+          "unit": "155g",
+          "srp": 20.5,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Lucky 7",
+          "unit": "155g",
+          "srp": 20.5,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Saba Philippines Sardines",
+          "unit": "155g",
+          "srp": 21.5,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Atami Regular Lid",
+          "unit": "155g",
+          "srp": 22.5,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Mikado Regular Lid",
+          "unit": "155g",
+          "srp": 22.5,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Atami EOC",
+          "unit": "155g",
+          "srp": 23.25,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Mikado EOC",
+          "unit": "155g",
+          "srp": 23.25,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Mariko Regular Lid",
+          "unit": "155g",
+          "srp": 23.75,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Sallenas Regular Lid",
+          "unit": "155g",
+          "srp": 24.75,
+          "date": "2026-05-11"
+        }
+      ]
+    },
+    {
+      "category": "COFFEE 3-in-1 ORIGINAL",
+      "date": "2026-05-11",
+      "count": 6,
+      "min": 4.7,
+      "median": 7.63,
+      "max": 10.0,
+      "products": [
+        {
+          "product": "Café Puro",
+          "unit": "17g",
+          "srp": 4.7,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Blend 45 3-in-1 Original",
+          "unit": "18g",
+          "srp": 5.5,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "San Mig Coffee 3-in-1 Original",
+          "unit": "20g",
+          "srp": 7.5,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Nescafe Original",
+          "unit": "20g",
+          "srp": 7.75,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Kopiko Black",
+          "unit": "30g",
+          "srp": 8.5,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Great Taste Original Twin Pack",
+          "unit": "33g",
+          "srp": 10.0,
+          "date": "2026-05-11"
+        }
+      ]
+    },
+    {
+      "category": "COFFEE REFILL",
+      "date": "2025-02-01",
+      "count": 5,
+      "min": 20.25,
+      "median": 22.0,
+      "max": 43.0,
+      "products": [
+        {
+          "product": "Blend 45 Pure Soluble - Supermarket",
+          "unit": "25g",
+          "srp": 20.25,
+          "date": "2025-02-01"
+        },
+        {
+          "product": "Great Taste (Premium) SMKT",
+          "unit": "25g",
+          "srp": 21.6,
+          "date": "2025-02-01"
+        },
+        {
+          "product": "Great Taste (Granules) SMKT",
+          "unit": "25g",
+          "srp": 22.0,
+          "date": "2025-02-01"
+        },
+        {
+          "product": "Great Taste (Premium) SMKT",
+          "unit": "50g",
+          "srp": 42.2,
+          "date": "2025-02-01"
+        },
+        {
+          "product": "Great Taste (Granules) SMKT",
+          "unit": "50g",
+          "srp": 43.0,
+          "date": "2025-02-01"
+        }
+      ]
+    },
+    {
+      "category": "CONDENSADA",
+      "date": "2025-02-01",
+      "count": 3,
+      "min": 34.75,
+      "median": 41.0,
+      "max": 53.0,
+      "products": [
+        {
+          "product": "Liberty",
+          "unit": "168mL",
+          "srp": 34.75,
+          "date": "2025-02-01"
+        },
+        {
+          "product": "Cow Bell",
+          "unit": "300mL",
+          "srp": 41.0,
+          "date": "2025-02-01"
+        },
+        {
+          "product": "Liberty",
+          "unit": "300mL",
+          "srp": 53.0,
+          "date": "2025-02-01"
+        }
+      ]
+    },
+    {
+      "category": "CONDENSED MILK",
+      "date": "2026-05-11",
+      "count": 1,
+      "min": 44.5,
+      "median": 44.5,
+      "max": 44.5,
+      "products": [
+        {
+          "product": "Jersey Sweetened Condensed Creamer",
+          "unit": "390g",
+          "srp": 44.5,
+          "date": "2026-05-11"
+        }
+      ]
+    },
+    {
+      "category": "CORNED BEEF",
+      "date": "2026-05-11",
+      "count": 7,
+      "min": 23.0,
+      "median": 34.0,
+      "max": 41.75,
+      "products": [
+        {
+          "product": "Bingo",
+          "unit": "150g",
+          "srp": 23.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "El Rancho - SMKT",
+          "unit": "150g",
+          "srp": 31.25,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Winner - SMKT",
+          "unit": "150g",
+          "srp": 33.75,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Star Corned Beef",
+          "unit": "150g",
+          "srp": 34.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Young’s Town Premium",
+          "unit": "150g",
+          "srp": 34.25,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Argentina",
+          "unit": "150g",
+          "srp": 36.75,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Argentina",
+          "unit": "175g",
+          "srp": 41.75,
+          "date": "2026-05-11"
+        }
+      ]
+    },
+    {
+      "category": "DETERGENT SOAP/LAUNDRY SOAP",
+      "date": "2026-05-11",
+      "count": 10,
+      "min": 21.0,
+      "median": 23.25,
+      "max": 25.75,
+      "products": [
+        {
+          "product": "Bonux (FLOWER FIESTA, KALAMANSI ZEST)",
+          "unit": "380g",
+          "srp": 21.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Budget Bar (WHITE ANTI BAC, FABCON, KALAMANSI, POWER BLUE, SPECKLED BLUE) - Luzon",
+          "unit": "330g",
+          "srp": 21.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Sulit Bar (BLUE, WHITE, KALAMANSI, SPECKLED BLUE) - Visayas / Mindanao",
+          "unit": "330g",
+          "srp": 21.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Bareta Bar (BLUE, SPECKLED BLUE, WHITE, KALAMANSI) - Visayas / Mindanao",
+          "unit": "330g",
+          "srp": 21.75,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Bareta Bar FABCON - Visayas / Mindanao",
+          "unit": "330g",
+          "srp": 23.25,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Surf Detergent Bar Active Clean Power Bula Power Puti - BLUE",
+          "unit": "360g",
+          "srp": 23.25,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Tide Bar ORIGINAL SCENT",
+          "unit": "380g",
+          "srp": 24.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Surf Detergent Bar Active Clean Power Bula Power Puti (KALAMANSI, TAWAS)",
+          "unit": "360g",
+          "srp": 24.5,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Champion Bar (SUPRA CLEAN, CITRUS FRESH)",
+          "unit": "370g",
+          "srp": 25.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Speed Long Bar (WHITE, BLUE, SPECKLED BLUE, KALAMANSI)",
+          "unit": "370g",
+          "srp": 25.75,
+          "date": "2026-05-11"
+        }
+      ]
+    },
+    {
+      "category": "DISTILLED WATER",
+      "date": "2026-05-11",
+      "count": 9,
+      "min": 6.5,
+      "median": 16.75,
+      "max": 83.0,
+      "products": [
+        {
+          "product": "SM Bonus",
+          "unit": "325mL",
+          "srp": 6.5,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "SM Bonus",
+          "unit": "500mL",
+          "srp": 8.5,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Absolute",
+          "unit": "350mL",
+          "srp": 12.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Wilkins",
+          "unit": "330mL",
+          "srp": 12.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Absolute",
+          "unit": "500mL",
+          "srp": 16.75,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Wilkins",
+          "unit": "500mL",
+          "srp": 17.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Absolute",
+          "unit": "1L",
+          "srp": 25.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Wilkins",
+          "unit": "1L",
+          "srp": 25.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Absolute",
+          "unit": "6L",
+          "srp": 83.0,
+          "date": "2026-05-11"
+        }
+      ]
+    },
+    {
+      "category": "EVAPORADA",
+      "date": "2023-02-08",
+      "count": 2,
+      "min": 28.5,
+      "median": 30.03,
+      "max": 31.56,
+      "products": [
+        {
+          "product": "Cow Bell",
+          "unit": "370mL",
+          "srp": 28.5,
+          "date": "2023-02-08"
+        },
+        {
+          "product": "Alaska",
+          "unit": "370mL",
+          "srp": 31.56,
+          "date": "2023-02-08"
+        }
+      ]
+    },
+    {
+      "category": "EVAPORATED MILK",
+      "date": "2026-05-11",
+      "count": 1,
+      "min": 48.0,
+      "median": 48.0,
+      "max": 48.0,
+      "products": [
+        {
+          "product": "Angel Filled Milk",
+          "unit": "370mL",
+          "srp": 48.0,
+          "date": "2026-05-11"
+        }
+      ]
+    },
+    {
+      "category": "INSTANT MAMI NOODLES CHICKEN & BEEF FLAVOR",
+      "date": "2026-05-11",
+      "count": 4,
+      "min": 7.5,
+      "median": 8.38,
+      "max": 9.0,
+      "products": [
+        {
+          "product": "Payless (Chicken Espesyal and Beef Paborito Flavor)",
+          "unit": "55g",
+          "srp": 7.5,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Quick Chow (Instant Mami Beef and Instant Mami Chicken)",
+          "unit": "55g",
+          "srp": 7.75,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Ho-Mi (Instant Mami Chicken & Garlic, Instant Mami Beef Brisket)",
+          "unit": "55g",
+          "srp": 9.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Lucky Me! (Instant Mami Chicken na Chicken and Instant Mami Beef na Beef)",
+          "unit": "55g",
+          "srp": 9.0,
+          "date": "2026-05-11"
+        }
+      ]
+    },
+    {
+      "category": "INSTANT NOODLES CHICKEN & BEEF FLAVOR",
+      "date": "2023-02-08",
+      "count": 4,
+      "min": 7.0,
+      "median": 7.83,
+      "max": 8.75,
+      "products": [
+        {
+          "product": "Payless (Instant Mami Chicken and Instant Mami Beef)",
+          "unit": "55g",
+          "srp": 7.0,
+          "date": "2023-02-08"
+        },
+        {
+          "product": "Quick Chow (Instant Mami Beef and Instant Mami Chicken)",
+          "unit": "55g",
+          "srp": 7.25,
+          "date": "2023-02-08"
+        },
+        {
+          "product": "Ho-Mi (Instant Mami Chicken & Garlic, Instant Mami Beef Brisket)",
+          "unit": "55g",
+          "srp": 8.4,
+          "date": "2023-02-08"
+        },
+        {
+          "product": "Lucky Me! (Instant Mami Chicken na Chicken and Instant Mami Beef na Beef)",
+          "unit": "55g",
+          "srp": 8.75,
+          "date": "2023-02-08"
+        }
+      ]
+    },
+    {
+      "category": "IODIZED ROCK SALT",
+      "date": "2026-05-11",
+      "count": 7,
+      "min": 7.5,
+      "median": 13.5,
+      "max": 25.0,
+      "products": [
+        {
+          "product": "Lasap Rock Salt",
+          "unit": "250g",
+          "srp": 7.5,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Fidel Coarse (Red) - Luzon",
+          "unit": "250g",
+          "srp": 11.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Fidel Coarse (Red) - Visayas / Mindanao",
+          "unit": "250g",
+          "srp": 11.75,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Lasap Rock Salt",
+          "unit": "500g",
+          "srp": 13.5,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Fidel Coarse (Red) - Luzon",
+          "unit": "500g",
+          "srp": 21.25,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Fidel Coarse (Red) - Visayas/ Mindanao",
+          "unit": "500g",
+          "srp": 22.5,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Lasap Rock Salt",
+          "unit": "1kg",
+          "srp": 25.0,
+          "date": "2026-05-11"
+        }
+      ]
+    },
+    {
+      "category": "IODIZED SALT",
+      "date": "2026-05-11",
+      "count": 12,
+      "min": 4.75,
+      "median": 15.38,
+      "max": 31.5,
+      "products": [
+        {
+          "product": "Lasap Iodized Salt",
+          "unit": "100g",
+          "srp": 4.75,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Lasap Iodized Salt",
+          "unit": "250g",
+          "srp": 9.75,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Fidel Refined (Blue) - Luzon",
+          "unit": "250g",
+          "srp": 11.75,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Fidel Refined (Blue) - Visayas / Mindanao",
+          "unit": "250g",
+          "srp": 12.25,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Fidel Free Flowing (Green) - Luzon",
+          "unit": "250g",
+          "srp": 12.75,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Fidel Free Flowing (Green) - Visayas & Mindanao",
+          "unit": "250g",
+          "srp": 13.5,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Lasap Iodized Salt",
+          "unit": "500g",
+          "srp": 17.25,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Fidel Refined (Blue) - Luzon",
+          "unit": "500g",
+          "srp": 23.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Fidel Refined (Blue) - Visayas & Mindanao",
+          "unit": "500g",
+          "srp": 23.25,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Fidel Free Flowing (Green) - Luzon",
+          "unit": "500g",
+          "srp": 25.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Fidel Free Flowing (Green) - Visayas & Mindanao",
+          "unit": "500g",
+          "srp": 25.5,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Lasap Iodized Salt",
+          "unit": "1kg",
+          "srp": 31.5,
+          "date": "2026-05-11"
+        }
+      ]
+    },
+    {
+      "category": "LUNCHEON MEAT",
+      "date": "2026-05-11",
+      "count": 2,
+      "min": 40.0,
+      "median": 40.5,
+      "max": 41.0,
+      "products": [
+        {
+          "product": "Purefoods Chinese Style",
+          "unit": "165g",
+          "srp": 40.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "CDO Chinese Style",
+          "unit": "165g",
+          "srp": 41.0,
+          "date": "2026-05-11"
+        }
+      ]
+    },
+    {
+      "category": "MEAT LOAF",
+      "date": "2026-05-11",
+      "count": 5,
+      "min": 18.0,
+      "median": 21.75,
+      "max": 25.25,
+      "products": [
+        {
+          "product": "Winner - Supermarket (SMKT)",
+          "unit": "150g",
+          "srp": 18.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "555",
+          "unit": "150g",
+          "srp": 19.5,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "CDO",
+          "unit": "150g",
+          "srp": 21.75,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Argentina",
+          "unit": "150g",
+          "srp": 23.75,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Argentina",
+          "unit": "170g",
+          "srp": 25.25,
+          "date": "2026-05-11"
+        }
+      ]
+    },
+    {
+      "category": "MINERALIZED WATER",
+      "date": "2026-05-11",
+      "count": 14,
+      "min": 6.6,
+      "median": 10.23,
+      "max": 75.0,
+      "products": [
+        {
+          "product": "Refresh",
+          "unit": "350mL",
+          "srp": 6.6,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Supersavers Nature’s Pure",
+          "unit": "330mL",
+          "srp": 7.15,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Supersavers Nature’s Pure",
+          "unit": "500mL",
+          "srp": 8.7,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Hidden Spring",
+          "unit": "330mL",
+          "srp": 8.8,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Refresh",
+          "unit": "500mL",
+          "srp": 9.15,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Summit",
+          "unit": "350mL",
+          "srp": 10.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Viva - Nationwide",
+          "unit": "330mL",
+          "srp": 10.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Robinsons Mall",
+          "unit": "500mL",
+          "srp": 10.45,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Summit",
+          "unit": "500mL",
+          "srp": 12.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Hidden Spring",
+          "unit": "500mL",
+          "srp": 12.1,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Viva - Nationwide",
+          "unit": "500mL",
+          "srp": 13.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Viva - Nationwide",
+          "unit": "1L",
+          "srp": 19.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Summit",
+          "unit": "1L",
+          "srp": 19.5,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Summit",
+          "unit": "6L",
+          "srp": 75.0,
+          "date": "2026-05-11"
+        }
+      ]
+    },
+    {
+      "category": "PATIS – DOY PACK / BUDGET PACK",
+      "date": "2026-05-11",
+      "count": 2,
+      "min": 13.25,
+      "median": 18.5,
+      "max": 23.75,
+      "products": [
+        {
+          "product": "Lorins – Pouch",
+          "unit": "150ml",
+          "srp": 13.25,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Lorins – Budget Pouch",
+          "unit": "350ml",
+          "srp": 23.75,
+          "date": "2026-05-11"
+        }
+      ]
+    },
+    {
+      "category": "PATIS – GIN / PET BOTTLE",
+      "date": "2026-05-11",
+      "count": 4,
+      "min": 26.0,
+      "median": 28.0,
+      "max": 32.75,
+      "products": [
+        {
+          "product": "Silver Swan Special",
+          "unit": "350ml",
+          "srp": 26.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Lorins PET Bottle",
+          "unit": "350ml",
+          "srp": 27.5,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Datu Puti",
+          "unit": "350ml",
+          "srp": 28.5,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Nelicom Special",
+          "unit": "350ml",
+          "srp": 32.75,
+          "date": "2026-05-11"
+        }
+      ]
+    },
+    {
+      "category": "POWDERED MILK",
+      "date": "2026-05-11",
+      "count": 3,
+      "min": 50.0,
+      "median": 70.75,
+      "max": 96.25,
+      "products": [
+        {
+          "product": "Bear Brand",
+          "unit": "135g",
+          "srp": 50.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Birch Tree Full Cream Milk",
+          "unit": "150g",
+          "srp": 70.75,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Jersey Fortified Instant Powdered Milk Drink",
+          "unit": "300g",
+          "srp": 96.25,
+          "date": "2026-05-11"
+        }
+      ]
+    },
+    {
+      "category": "PURIFIED WATER",
+      "date": "2026-05-11",
+      "count": 9,
+      "min": 5.0,
+      "median": 10.5,
+      "max": 19.5,
+      "products": [
+        {
+          "product": "SM Bonus",
+          "unit": "300mL",
+          "srp": 5.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Refresh",
+          "unit": "500mL",
+          "srp": 6.75,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Magnolia Pure",
+          "unit": "355mL",
+          "srp": 8.5,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Magnolia Pure",
+          "unit": "500mL",
+          "srp": 10.5,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Natures Spring",
+          "unit": "500mL",
+          "srp": 10.5,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Wilkins Pure",
+          "unit": "500mL",
+          "srp": 11.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Natures Spring",
+          "unit": "1L",
+          "srp": 16.5,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Wilkins Pure",
+          "unit": "1L",
+          "srp": 18.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Magnolia Pure",
+          "unit": "1L",
+          "srp": 19.5,
+          "date": "2026-05-11"
+        }
+      ]
+    },
+    {
+      "category": "SOY SAUCE – DOY PACK / REFILL PACK",
+      "date": "2026-05-11",
+      "count": 1,
+      "min": 12.0,
+      "median": 12.0,
+      "max": 12.0,
+      "products": [
+        {
+          "product": "Silver Swan Doy Pack",
+          "unit": "200ml",
+          "srp": 12.0,
+          "date": "2026-05-11"
+        }
+      ]
+    },
+    {
+      "category": "SOY SAUCE – GIN / PET BOTTLE",
+      "date": "2026-05-11",
+      "count": 2,
+      "min": 21.25,
+      "median": 21.75,
+      "max": 22.25,
+      "products": [
+        {
+          "product": "Datu Puti",
+          "unit": "350ml",
+          "srp": 21.25,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Silver Swan",
+          "unit": "350ml",
+          "srp": 22.25,
+          "date": "2026-05-11"
+        }
+      ]
+    },
+    {
+      "category": "TOILET SOAP",
+      "date": "2026-05-11",
+      "count": 7,
+      "min": 15.0,
+      "median": 25.75,
+      "max": 49.0,
+      "products": [
+        {
+          "product": "Green Cross (Pure Care)",
+          "unit": "55g",
+          "srp": 15.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Palmolive Naturals - Pinkish Glow (pink), Hydrating Glow (green), White with Natural Papaya, and White with Natural Milk",
+          "unit": "55g",
+          "srp": 17.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Safeguard Pure White",
+          "unit": "55g",
+          "srp": 22.0,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Green Cross (Pure Care)",
+          "unit": "85g",
+          "srp": 25.75,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Safeguard Pure White",
+          "unit": "82g",
+          "srp": 31.25,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Green Cross (Pure Care)",
+          "unit": "125g",
+          "srp": 37.25,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Safeguard Pure White",
+          "unit": "119g",
+          "srp": 49.0,
+          "date": "2026-05-11"
+        }
+      ]
+    },
+    {
+      "category": "VINEGAR – DOY / REFILL PACK",
+      "date": "2026-05-11",
+      "count": 1,
+      "min": 8.75,
+      "median": 8.75,
+      "max": 8.75,
+      "products": [
+        {
+          "product": "Silver Swan Sukang Puti Doy Pack",
+          "unit": "200ml",
+          "srp": 8.75,
+          "date": "2026-05-11"
+        }
+      ]
+    },
+    {
+      "category": "VINEGAR – GIN AND PET BOTTLE",
+      "date": "2026-05-11",
+      "count": 2,
+      "min": 19.25,
+      "median": 19.25,
+      "max": 19.25,
+      "products": [
+        {
+          "product": "Datu Puti - White Vinegar",
+          "unit": "350ml",
+          "srp": 19.25,
+          "date": "2026-05-11"
+        },
+        {
+          "product": "Silver Swan Sukang Puti",
+          "unit": "350ml",
+          "srp": 19.25,
+          "date": "2026-05-11"
+        }
+      ]
+    }
+  ]
+}

@@ -23,6 +23,16 @@ The artifact compares a full-cost floor, target-margin price, competitor band, S
 
 The deployed site uses `docs/portfolio.json` as a packaged data snapshot and shows **Packaged data snapshot**. When the artifact runs on localhost with the Streamlit app available, it fetches live data from `http://localhost:8501/app/static/portfolio.json` and shows **Live from Streamlit**.
 
+## Live explanation assistant
+
+The artifact calls a server-side proxy for live Groq explanations. The API key never reaches the browser.
+
+- **Netlify:** the function is `netlify/functions/explain.mjs`. Set `GROQ_API_KEY` in Netlify under Site settings > Environment variables.
+- **Local:** copy `source/.env.example` to `source/.env`, add the key, then run `pnpm explain` in one terminal and `pnpm dev` in another.
+- **GitHub Pages:** static hosting cannot run the function, so the artifact uses the scripted fallback and labels it clearly.
+
+The proxy sends only the five-scenario table, range state, notes, optional question, and language to Groq. It does not receive raw cost inputs, enterprise identity, or competitor source names. A post-generation guardrail blocks explicit price-setting language.
+
 ## Repository layout
 
 ```

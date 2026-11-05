@@ -6,3 +6,7 @@ dist/
 .DS_Store
 __pycache__/
 *.py[cod]
+.parcel-cache/
+.parcelrc
+bundle.html
+pnpm-workspace.yaml

@@ -7,11 +7,23 @@ import {
   Info,
   ShieldCheck,
 } from 'lucide-react'
-import { products, type Product } from './data'
+import { products, SUBSECTORS, type Product } from './data'
 import { portfolio, type PortfolioPoint, type PortfolioState } from './portfolio'
+import { explainWithGroq, type AssistantReply } from './assistant'
+import { DEFAULT_SRP_CATEGORY, useSrpData } from './srp'
 
 type RangeState = 'feasible' | 'empty' | 'srp_unmatched' | 'cost_only'
 type Language = 'en' | 'fil'
+type Mode = 'presentation' | 'manual'
+
+type DecisionRecord = {
+  product: string
+  subsector: string
+  price: number
+  state: string
+  range: string
+  reason: string
+}
 
 type Scenario = {
   name: string
@@ -31,6 +43,7 @@ type Calculation = {
   rangeLow: number | null
   rangeHigh: number | null
   gap: number | null
+  notes: string[]
   scenarios: Scenario[]
 }
 
@@ -79,27 +92,52 @@ function pct(value: number): string {
   }).format(value)
 }
 
-function calculate(
-  product: Product,
-  targetMargin: number,
-  markup: number,
-): Calculation {
+function calculate(product: Product, mode: Mode): Calculation {
+  const materials = Math.max(product.materials, 0)
+  const labor = Math.max(product.labor, 0)
+  const variableOverhead = Math.max(product.variableOverhead, 0)
+  const packaging = Math.max(product.packaging, 0)
+  const freightIn = Math.max(product.freightIn, 0)
+  const fixedCost = Math.max(product.fixedCost, 0)
+  const expectedUnits = Math.max(product.expectedUnits, 1)
+  const targetMargin = Math.min(Math.max(product.targetMargin, 0), 0.9)
+  const markup = Math.max(product.markup, 0)
+
   const variableUnitCost =
-    product.materials +
-    product.labor +
-    product.variableOverhead +
-    product.packaging +
-    product.freightIn
-  const fixedCostPerUnit = product.fixedCost / product.expectedUnits
+    materials + labor + variableOverhead + packaging + freightIn
+  const fixedCostPerUnit = fixedCost / expectedUnits
   const fullCostFloor = variableUnitCost + fixedCostPerUnit
-  const targetMarginPrice = fullCostFloor / (1 - targetMargin)
+  const targetMarginPrice =
+    targetMargin < 0.999 ? fullCostFloor / (1 - targetMargin) : Number.POSITIVE_INFINITY
   const markupPrice = fullCostFloor * (1 + markup)
 
-  const upperCandidates: number[] = []
-  if (product.competitorHigh != null) upperCandidates.push(product.competitorHigh)
-  if (product.srpBinding && product.srpReference != null) {
-    upperCandidates.push(product.srpReference)
+  let competitorLow =
+    product.competitorLow != null && product.competitorLow > 0
+      ? product.competitorLow
+      : null
+  let competitorHigh =
+    product.competitorHigh != null && product.competitorHigh > 0
+      ? product.competitorHigh
+      : null
+  if (
+    competitorLow != null &&
+    competitorHigh != null &&
+    competitorLow > competitorHigh
+  ) {
+    ;[competitorLow, competitorHigh] = [competitorHigh, competitorLow]
   }
+
+  const srp =
+    product.srpReference != null && product.srpReference > 0
+      ? product.srpReference
+      : null
+  const srpBinding = Boolean(product.srpBinding && srp != null)
+  const srpShort = mode === 'presentation' ? 'SRP' : 'DTI SRP'
+  const srpTerm = mode === 'presentation' ? 'SRP reference' : 'DTI SRP reference'
+
+  const upperCandidates: number[] = []
+  if (competitorHigh != null) upperCandidates.push(competitorHigh)
+  if (srp != null && srpBinding) upperCandidates.push(srp)
   const upperReference =
     upperCandidates.length > 0 ? Math.min(...upperCandidates) : null
 
@@ -108,7 +146,7 @@ function calculate(
     state = 'cost_only'
   } else if (fullCostFloor > upperReference + 1e-9) {
     state = 'empty'
-  } else if (product.srpReference == null) {
+  } else if (srp == null) {
     state = 'srp_unmatched'
   } else {
     state = 'feasible'
@@ -121,22 +159,47 @@ function calculate(
   const gap = state === 'empty' ? fullCostFloor - upperReference! : null
 
   const competitorValue =
-    product.competitorLow != null && product.competitorHigh != null
-      ? `${peso(product.competitorLow)} to ${peso(product.competitorHigh)}`
+    competitorLow != null && competitorHigh != null
+      ? `${peso(competitorLow)} to ${peso(competitorHigh)}`
       : 'Not provided'
 
-  const srpStatus = product.srpBinding
+  const srpStatus = srpBinding
     ? 'Binding ceiling'
-    : product.srpReference != null
+    : srp != null
       ? 'Suggested reference'
       : 'Not matched'
+
+  const notes = [
+    'The full-cost floor is a price at the expected volume; it is not a demand-adjusted breakeven.',
+  ]
+  if (state === 'cost_only') {
+    notes.push(
+      `No competitor band or binding ${srpShort} reference was provided. The aid shows the cost floor and target-margin price only.`,
+    )
+  } else if (state === 'empty') {
+    notes.push(
+      'The full-cost floor is above the market reference. No price satisfies both; consider cost reduction, volume increase, or a different reference.',
+    )
+  } else if (state === 'srp_unmatched') {
+    notes.push(
+      `No ${srpShort} match was found. The range uses the competitor band only.`,
+    )
+  } else if (srp != null && !srpBinding) {
+    notes.push(
+      `The ${srpTerm} is shown as a suggested reference, not a legal ceiling.`,
+    )
+  } else if (srp != null && srpBinding) {
+    notes.push(
+      `The ${srpTerm} is treated as a binding ceiling because a legal instrument was explicitly recorded.`,
+    )
+  }
 
   const scenarios: Scenario[] = [
     {
       name: 'Current price',
-      value: peso(product.currentPrice),
+      value: product.currentPrice > 0 ? peso(product.currentPrice) : 'Not provided',
       basis: 'Owner-reported current selling price',
-      status: 'Observed',
+      status: product.currentPrice > 0 ? 'Observed' : 'Not provided',
     },
     {
       name: 'Full-cost floor',
@@ -153,13 +216,25 @@ function calculate(
     {
       name: 'Competitor band',
       value: competitorValue,
-      basis: 'Firm-specific synthetic competitor prices',
-      status: product.competitorLow != null ? 'Reference' : 'Not provided',
+      basis:
+        mode === 'presentation'
+          ? 'Firm-specific synthetic competitor prices'
+          : 'Firm-specific observed competitor prices',
+      status:
+        competitorLow != null && competitorHigh != null
+          ? 'Reference'
+          : 'Not provided',
     },
     {
-      name: 'SRP reference',
-      value: product.srpReference != null ? peso(product.srpReference) : 'Not matched',
-      basis: 'Synthetic SRP value, not a DTI bulletin',
+      name:
+        mode === 'presentation'
+          ? 'SRP reference (synthetic)'
+          : 'DTI SRP reference',
+      value: srp != null ? peso(srp) : 'Not matched',
+      basis:
+        mode === 'presentation'
+          ? 'Synthetic SRP reference generated by Monte Carlo; not a DTI bulletin'
+          : 'DTI Suggested Retail Price, latest matched bulletin',
       status: srpStatus,
     },
   ]
@@ -175,34 +250,77 @@ function calculate(
     rangeLow,
     rangeHigh,
     gap,
+    notes,
     scenarios,
   }
 }
 
-function rangeNote(calc: Calculation): string {
+function rangeNote(calc: Calculation, mode: Mode): string {
+  const srpShort = mode === 'presentation' ? 'SRP' : 'DTI SRP'
   if (calc.state === 'feasible') {
-    return `The floor is ${peso(calc.fullCostFloor)} and the upper reference is ${peso(
-      calc.upperReference,
-    )}. The reference range is ${peso(calc.rangeLow)} to ${peso(calc.rangeHigh)}.`
+    return `Reference range: ${peso(calc.rangeLow)} to ${peso(
+      calc.rangeHigh,
+    )}. This is the intersection of the full-cost floor and the market reference. It is not a recommended price.`
   }
   if (calc.state === 'empty') {
-    return `The floor is ${peso(calc.fullCostFloor)}. The market reference tops out at ${peso(
-      calc.upperReference,
-    )}. The gap is ${peso(calc.gap)} per unit, so no price meets both.`
+    return `No price satisfies both the full-cost floor and the market reference. The gap is ${peso(
+      calc.gap,
+    )} per unit. Consider cost reduction, a volume increase, or a different market reference before setting a price.`
   }
   if (calc.state === 'srp_unmatched') {
-    return `No SRP match was found. The range uses the competitor band only, from ${peso(
-      calc.fullCostFloor,
-    )} to ${peso(calc.upperReference)}.`
+    return `Reference range: ${peso(calc.rangeLow)} to ${peso(
+      calc.rangeHigh,
+    )}. No ${srpShort} match was found, so the range uses the competitor band only.`
   }
-  return `No competitor band or binding SRP was provided. The aid shows the cost floor and target-margin price only.`
+  return `No competitor band or binding ${srpShort} reference was provided. The aid shows the cost floor and target-margin price only; no market range is inferred.`
+}
+
+function scriptedQuestionAnswer(
+  question: string,
+  product: Product,
+  calc: Calculation,
+  language: Language,
+  mode: Mode,
+): string {
+  const q = question.trim().toLowerCase()
+  if (!q) return ''
+  const srpLabel = mode === 'presentation' ? 'synthetic SRP reference' : 'DTI SRP reference'
+
+  if (q.includes('floor') && q.includes('target')) {
+    return language === 'fil'
+      ? `Ang full-cost floor ay ${peso(calc.fullCostFloor)}. Sinasaklaw nito ang variable cost at ang fixed cost na inilalaan sa bawat unit. Ang target-margin price ay ${peso(calc.targetMarginPrice)}, na idinagdag ang ${pct(product.targetMargin)} margin sa full cost.`
+      : `The full-cost floor is ${peso(calc.fullCostFloor)}. It covers variable cost plus the fixed cost allocated to each unit. The target-margin price is ${peso(calc.targetMarginPrice)}, which adds the ${pct(product.targetMargin)} margin on top of full cost.`
+  }
+  if (q.includes('empty') || q.includes('gap') || q.includes('infeasible')) {
+    return language === 'fil'
+      ? `Ang market reference ay hanggang ${peso(calc.upperReference)}. Mas mataas ang floor ng ${peso(calc.gap)} bawat unit, kaya walang presyong umaabot sa dalawa. Hindi binabalewala ng aid ang ceiling.`
+      : `The market reference tops out at ${peso(calc.upperReference)}. The floor is ${peso(calc.gap)} per unit above it, so no price meets both. The aid does not relax the ceiling.`
+  }
+  if (q.includes('srp') || q.includes('ceiling') || q.includes('dti')) {
+    return language === 'fil'
+      ? `Ang ${srpLabel} ay ${peso(product.srpReference)}. ${product.srpBinding ? 'Itinuring itong binding ceiling dahil may naitalang legal instrument.' : 'Reference lamang ito at hindi legal na ceiling.'}`
+      : `The ${srpLabel} is ${peso(product.srpReference)}. ${product.srpBinding ? 'It is treated as a binding ceiling because a legal instrument was recorded.' : 'It is a reference, not a legal ceiling.'}`
+  }
+  if (q.includes('competitor') || q.includes('band') || q.includes('market')) {
+    return language === 'fil'
+      ? `Ang competitor band ay ${peso(product.competitorLow)} hanggang ${peso(product.competitorHigh)}. Ito ang firm-specific na reference na ginamit sa range.`
+      : `The competitor band runs from ${peso(product.competitorLow)} to ${peso(product.competitorHigh)}. It is the firm-specific reference used in the range.`
+  }
+  return language === 'fil'
+    ? `Tungkol sa tanong mong "${question.trim()}", ito ang nabasa ng aid mula sa talahanayan.`
+    : `On your question, "${question.trim()}", here is what the table supports.`
 }
 
 function buildExplanation(
   product: Product,
   calc: Calculation,
   language: Language,
+  question: string,
+  mode: Mode,
 ): string {
+  const answer = scriptedQuestionAnswer(question, product, calc, language, mode)
+  const srpLabel = mode === 'presentation' ? 'synthetic SRP reference' : 'DTI SRP reference'
+
   if (language === 'fil') {
     const base = [
       `Ang full-cost floor ay ${peso(calc.fullCostFloor)} bawat unit sa ${product.expectedUnits.toLocaleString(
@@ -221,7 +339,7 @@ function buildExplanation(
       )
       if (product.srpReference != null) {
         base.push(
-          `Ang synthetic SRP reference ay ${peso(product.srpReference)}${
+          `Ang ${srpLabel} ay ${peso(product.srpReference)}${
             product.srpBinding ? ', at itinuring itong binding ceiling' : ''
           }.`,
         )
@@ -239,7 +357,7 @@ function buildExplanation(
       )
     } else if (calc.state === 'srp_unmatched') {
       base.push(
-        `Walang SRP match. Ang competitor band lamang ang ginamit, mula ${peso(
+        `Walang ${mode === 'presentation' ? 'SRP' : 'DTI SRP'} match. Ang competitor band lamang ang ginamit, mula ${peso(
           calc.fullCostFloor,
         )} hanggang ${peso(calc.upperReference)}.`,
       )
@@ -248,7 +366,7 @@ function buildExplanation(
         `Walang competitor band o binding SRP. Ang cost floor at target-margin price lamang ang makikita.`,
       )
     }
-    return base.join(' ')
+    return [answer, base.join(' ')].filter(Boolean).join(' ')
   }
 
   const parts = [
@@ -269,7 +387,7 @@ function buildExplanation(
     )
     if (product.srpReference != null) {
       parts.push(
-        `The synthetic SRP reference is ${peso(product.srpReference)}${
+        `The ${srpLabel} is ${peso(product.srpReference)}${
           product.srpBinding ? ', and it is treated as a binding ceiling' : ''
         }.`,
       )
@@ -287,7 +405,7 @@ function buildExplanation(
     )
   } else if (calc.state === 'srp_unmatched') {
     parts.push(
-      `No SRP match was found. The range uses the competitor band only, from ${peso(
+      `No ${mode === 'presentation' ? 'SRP' : 'DTI SRP'} match was found. The range uses the competitor band only, from ${peso(
         calc.fullCostFloor,
       )} to ${peso(calc.upperReference)}.`,
     )
@@ -297,7 +415,7 @@ function buildExplanation(
     )
   }
 
-  return parts.join(' ')
+  return [answer, parts.join(' ')].filter(Boolean).join(' ')
 }
 
 function PriceRow({
@@ -792,52 +910,201 @@ function CostComposition({
   )
 }
 
-function App() {
-  const [selectedId, setSelectedId] = useState(products[0].id)
-  const product = products.find((item) => item.id === selectedId) ?? products[0]
-  const [targetMargin, setTargetMargin] = useState(product.targetMargin)
-  const [markup, setMarkup] = useState(product.markup)
-  const [intendedPrice, setIntendedPrice] = useState(product.currentPrice)
-  const [showExplanation, setShowExplanation] = useState(false)
-  const [language, setLanguage] = useState<Language>('en')
-  const [recorded, setRecorded] = useState<
-    { id: string; name: string; price: number; state: string }[]
-  >([])
-
-  const calc = useMemo(
-    () => calculate(product, targetMargin, markup),
-    [product, targetMargin, markup],
+function NumberField({
+  label,
+  value,
+  onChange,
+  min = 0,
+  step = 1,
+  help,
+}: {
+  label: string
+  value: number
+  onChange: (value: number) => void
+  min?: number
+  step?: number
+  help?: string
+}) {
+  return (
+    <div>
+      <label className="text-xs font-medium text-[#5b615a]">{label}</label>
+      <input
+        type="number"
+        min={min}
+        step={step}
+        value={value}
+        onChange={(event) => onChange(Number(event.target.value))}
+        className="mt-1 h-9 w-full rounded-md border border-[#1f2a24]/15 bg-[#fdfbf7] px-2.5 font-mono text-sm tabular-nums text-[#1f2a24] outline-none focus-visible:ring-2 focus-visible:ring-[#2f5d50]"
+      />
+      {help && (
+        <p className="mt-1 text-[10px] leading-4 text-[#7b7266]">{help}</p>
+      )}
+    </div>
   )
+}
+
+function App() {
+  const [mode, setMode] = useState<Mode>('presentation')
+  const [selectedId, setSelectedId] = useState(products[0].id)
+  const [manual, setManual] = useState<Product>({
+    id: 'MANUAL',
+    name: 'Sample product',
+    subsector: 'Food processing',
+    materials: 8,
+    labor: 4,
+    variableOverhead: 2,
+    packaging: 0,
+    freightIn: 0,
+    fixedCost: 3_000,
+    expectedUnits: 1_000,
+    currentPrice: 20,
+    targetMargin: 0.25,
+    markup: 0.2,
+    competitorLow: 20,
+    competitorHigh: 25,
+    srpReference: null,
+    srpBinding: false,
+  })
+  const [hasCompetitor, setHasCompetitor] = useState(true)
+  const [dtiCategory, setDtiCategory] = useState(DEFAULT_SRP_CATEGORY)
+  const [intendedPrice, setIntendedPrice] = useState(products[0].currentPrice)
+  const [reason, setReason] = useState('')
+  const [question, setQuestion] = useState('')
+  const [showExplanation, setShowExplanation] = useState(false)
+  const [assistantReply, setAssistantReply] = useState<AssistantReply | null>(null)
+  const [assistantLoading, setAssistantLoading] = useState(false)
+  const [language, setLanguage] = useState<Language>('en')
+  const [recorded, setRecorded] = useState<DecisionRecord[]>([])
+
+  const { data: srpData } = useSrpData()
+  const dtiCategoryData = srpData?.categories.find(
+    (category) => category.category === dtiCategory,
+  )
+  const selectedProduct =
+    products.find((item) => item.id === selectedId) ?? products[0]
+  const product = mode === 'presentation' ? selectedProduct : manual
+
+  const calc = useMemo(() => calculate(product, mode), [product, mode])
   const { points, summary, status, reload } = useStreamlitPortfolio()
   const meta = stateMeta[calc.state]
-  const note = rangeNote(calc)
-  const explanation = buildExplanation(product, calc, language)
+  const note = rangeNote(calc, mode)
+  const explanation = buildExplanation(product, calc, language, question, mode)
+
+  useEffect(() => {
+    setAssistantReply(null)
+    setShowExplanation(false)
+  }, [calc, question, language])
+
+  useEffect(() => {
+    if (!srpData || mode !== 'manual') return
+    const selected =
+      srpData.categories.find((item) => item.category === dtiCategory) ??
+      srpData.categories.find((item) => item.category === DEFAULT_SRP_CATEGORY) ??
+      srpData.categories[0]
+    if (!selected) return
+    if (selected.category !== dtiCategory) setDtiCategory(selected.category)
+    setManual((current) =>
+      current.srpReference == null
+        ? { ...current, srpReference: selected.median }
+        : current,
+    )
+  }, [srpData, mode, dtiCategory])
+
+  function updateManual<K extends keyof Product>(key: K, value: Product[K]) {
+    setManual((current) => ({ ...current, [key]: value }))
+  }
 
   function selectProduct(id: string) {
     const next = products.find((item) => item.id === id) ?? products[0]
     setSelectedId(next.id)
-    setTargetMargin(next.targetMargin)
-    setMarkup(next.markup)
     setIntendedPrice(next.currentPrice)
     setShowExplanation(false)
+  }
+
+  function changeMode(next: Mode) {
+    setMode(next)
+    setIntendedPrice(
+      next === 'presentation' ? selectedProduct.currentPrice : manual.currentPrice,
+    )
+    setShowExplanation(false)
+  }
+
+  function selectDtiCategory(category: string) {
+    setDtiCategory(category)
+    const selected = srpData?.categories.find(
+      (item) => item.category === category,
+    )
+    setManual((current) => ({
+      ...current,
+      srpReference: selected?.median ?? null,
+      srpBinding: selected ? current.srpBinding : false,
+    }))
+  }
+
+  function toggleCompetitor(next: boolean) {
+    setHasCompetitor(next)
+    setManual((current) => ({
+      ...current,
+      competitorLow: next ? (current.competitorLow ?? 20) : null,
+      competitorHigh: next ? (current.competitorHigh ?? 25) : null,
+    }))
   }
 
   function recordDecision() {
     setRecorded((current) => [
       ...current,
       {
-        id: product.id,
-        name: product.name,
+        product: product.name,
+        subsector: product.subsector,
         price: intendedPrice,
         state: meta.label,
+        range:
+          calc.rangeLow != null && calc.rangeHigh != null
+            ? `${peso(calc.rangeLow)} to ${peso(calc.rangeHigh)}`
+            : 'No range',
+        reason: reason.trim(),
       },
     ])
+    setReason('')
+  }
+
+  async function handleExplain() {
+    if (showExplanation) {
+      setShowExplanation(false)
+      return
+    }
+    setAssistantLoading(true)
+    try {
+      const reply = await explainWithGroq({
+        calc,
+        question,
+        language: language === 'fil' ? 'Filipino/Tagalog' : 'English',
+      })
+      setAssistantReply(
+        reply.text
+          ? reply
+          : {
+              text: buildExplanation(product, calc, language, question, mode),
+              usedAi: false,
+              error: reply.error ?? 'empty_response',
+            },
+      )
+    } catch {
+      setAssistantReply({
+        text: buildExplanation(product, calc, language, question, mode),
+        usedAi: false,
+        error: 'proxy_unavailable',
+      })
+    } finally {
+      setAssistantLoading(false)
+      setShowExplanation(true)
+    }
   }
 
   return (
     <div className="min-h-screen bg-[#f4efe4] text-[#1f2a24]">
       <div className="mx-auto flex min-h-screen max-w-[1480px] flex-col lg:flex-row">
-        <aside className="w-full shrink-0 border-b border-[#1f2a24]/10 bg-[#efe9df] lg:w-[264px] lg:border-b-0 lg:border-r">
+        <aside className="w-full shrink-0 border-b border-[#1f2a24]/10 bg-[#efe9df] lg:w-[300px] xl:w-[340px] lg:border-b-0 lg:border-r">
           <div className="p-5">
             <div className="flex items-start justify-between gap-3">
               <div>
@@ -845,93 +1112,365 @@ function App() {
                 <p className="mt-2 text-xs text-[#7b7266]">Pricing decision aid</p>
               </div>
               <span className="rotate-[-2deg] border border-[#b45309] px-2 py-1 font-mono text-[9px] leading-none text-[#b45309]">
-                SYNTHETIC
+                {mode === 'presentation' ? 'SYNTHETIC' : 'MANUAL'}
               </span>
             </div>
 
-            <div className="mt-7">
-              <label
-                htmlFor="product"
-                className="text-xs font-medium text-[#5b615a]"
+            <div className="mt-6 grid grid-cols-2 gap-1 rounded-md border border-[#1f2a24]/15 bg-[#fdfbf7] p-1">
+              <button
+                type="button"
+                onClick={() => changeMode('presentation')}
+                className={`rounded-[4px] px-2 py-1.5 text-xs font-medium transition-colors ${
+                  mode === 'presentation'
+                    ? 'bg-[#2f5d50] text-[#fdfbf7]'
+                    : 'text-[#7b7266] hover:text-[#1f2a24]'
+                }`}
               >
-                Product record
-              </label>
-              <div className="relative mt-2">
-                <select
-                  id="product"
-                  value={selectedId}
-                  onChange={(event) => selectProduct(event.target.value)}
-                  className="h-10 w-full appearance-none rounded-md border border-[#1f2a24]/15 bg-[#fdfbf7] px-3 pr-9 text-sm text-[#1f2a24] outline-none focus-visible:ring-2 focus-visible:ring-[#2f5d50]"
-                >
-                  {products.map((item) => (
-                    <option key={item.id} value={item.id}>
-                      {item.id} · {item.name}
-                    </option>
-                  ))}
-                </select>
-                <ChevronDown
-                  className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#7b7266]"
-                  strokeWidth={1.5}
-                />
+                Presentation
+              </button>
+              <button
+                type="button"
+                onClick={() => changeMode('manual')}
+                className={`rounded-[4px] px-2 py-1.5 text-xs font-medium transition-colors ${
+                  mode === 'manual'
+                    ? 'bg-[#2f5d50] text-[#fdfbf7]'
+                    : 'text-[#7b7266] hover:text-[#1f2a24]'
+                }`}
+              >
+                Manual
+              </button>
+            </div>
+            <p className="mt-2 text-[10px] leading-4 text-[#7b7266]">
+              Use a synthetic record or enter your own cost and price inputs.
+            </p>
+
+            <div className="mt-6 border-t border-[#1f2a24]/10 pt-5">
+              <p className="text-xs text-[#7b7266]">Your decision</p>
+              <div className="mt-2 flex items-baseline justify-between gap-3">
+                <span className="font-mono text-[24px] leading-none tabular-nums">
+                  {peso(intendedPrice)}
+                </span>
+                <span className="text-xs text-[#7b7266]">per unit</span>
               </div>
-              <p className="mt-2 text-xs text-[#7b7266]">
-                {product.subsector} · {meta.label}
+              <input
+                type="range"
+                min={0}
+                max={Math.ceil(
+                  Math.max(
+                    product.currentPrice,
+                    calc.targetMarginPrice,
+                    product.competitorHigh ?? 0,
+                    product.srpReference ?? 0,
+                  ) * 1.25,
+                )}
+                step={0.01}
+                value={intendedPrice}
+                onChange={(event) =>
+                  setIntendedPrice(Number(event.target.value))
+                }
+                className="range mt-3 w-full"
+                aria-label="Your intended selling price"
+              />
+              <p className="mt-2 text-[10px] leading-4 text-[#7b7266]">
+                The aid does not choose this price. Set your own number, then
+                compare it with the table.
               </p>
+              <label className="mt-3 block text-xs font-medium text-[#5b615a]">
+                Reason for your decision (optional)
+              </label>
+              <input
+                value={reason}
+                onChange={(event) => setReason(event.target.value)}
+                placeholder="For example: matching the band, covering packaging, testing a lower price"
+                className="mt-1 h-9 w-full rounded-md border border-[#1f2a24]/15 bg-[#fdfbf7] px-2.5 text-sm text-[#1f2a24] outline-none placeholder:text-[#9a9286] focus-visible:ring-2 focus-visible:ring-[#2f5d50]"
+              />
+              <button
+                type="button"
+                onClick={recordDecision}
+                className="mt-3 inline-flex h-9 w-full items-center justify-center rounded-md bg-[#2f5d50] px-4 text-sm font-medium text-[#fdfbf7] transition-colors hover:bg-[#264c41] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2f5d50] focus-visible:ring-offset-2 focus-visible:ring-offset-[#efe9df]"
+              >
+                Record decision
+              </button>
+              {recorded.length > 0 && (
+                <p className="mt-2 text-[10px] text-[#7b7266]">
+                  Recorded this session: {recorded.length}
+                </p>
+              )}
             </div>
 
-            <div className="mt-7 space-y-5">
-              <div>
-                <div className="flex items-center justify-between gap-3">
-                  <label
-                    htmlFor="target-margin"
-                    className="text-xs font-medium text-[#5b615a]"
+            {mode === 'presentation' ? (
+              <div className="mt-6">
+                <label
+                  htmlFor="product"
+                  className="text-xs font-medium text-[#5b615a]"
+                >
+                  Product record
+                </label>
+                <div className="relative mt-2">
+                  <select
+                    id="product"
+                    value={selectedId}
+                    onChange={(event) => selectProduct(event.target.value)}
+                    className="h-10 w-full appearance-none rounded-md border border-[#1f2a24]/15 bg-[#fdfbf7] px-3 pr-9 text-sm text-[#1f2a24] outline-none focus-visible:ring-2 focus-visible:ring-[#2f5d50]"
                   >
-                    Target margin
-                  </label>
-                  <span className="font-mono text-xs tabular-nums">
-                    {pct(targetMargin)}
-                  </span>
+                    {products.map((item) => (
+                      <option key={item.id} value={item.id}>
+                        {item.id} · {item.name}
+                      </option>
+                    ))}
+                  </select>
+                  <ChevronDown
+                    className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#7b7266]"
+                    strokeWidth={1.5}
+                  />
                 </div>
-                <input
-                  id="target-margin"
-                  type="range"
-                  min={0}
-                  max={60}
-                  step={1}
-                  value={Math.round(targetMargin * 100)}
-                  onChange={(event) =>
-                    setTargetMargin(Number(event.target.value) / 100)
-                  }
-                  className="range mt-3 w-full"
-                />
+                <p className="mt-2 text-xs text-[#7b7266]">
+                  {product.subsector} · {meta.label}
+                </p>
+                <div className="mt-4 grid grid-cols-2 gap-3 border-t border-[#1f2a24]/10 pt-4 text-xs">
+                  <div>
+                    <p className="text-[#7b7266]">Target margin</p>
+                    <p className="mt-1 font-mono tabular-nums">
+                      {pct(product.targetMargin)}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-[#7b7266]">Markup</p>
+                    <p className="mt-1 font-mono tabular-nums">
+                      {pct(product.markup)}
+                    </p>
+                  </div>
+                </div>
               </div>
+            ) : (
+              <div className="mt-6 space-y-4">
+                <div>
+                  <label className="text-xs font-medium text-[#5b615a]">
+                    Manufacturing subsector
+                  </label>
+                  <div className="relative mt-1">
+                    <select
+                      value={manual.subsector}
+                      onChange={(event) =>
+                        updateManual('subsector', event.target.value)
+                      }
+                      className="h-10 w-full appearance-none rounded-md border border-[#1f2a24]/15 bg-[#fdfbf7] px-3 pr-9 text-sm text-[#1f2a24] outline-none focus-visible:ring-2 focus-visible:ring-[#2f5d50]"
+                    >
+                      {SUBSECTORS.map((item) => (
+                        <option key={item} value={item}>
+                          {item}
+                        </option>
+                      ))}
+                    </select>
+                    <ChevronDown
+                      className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#7b7266]"
+                      strokeWidth={1.5}
+                    />
+                  </div>
+                </div>
 
-              <div>
-                <div className="flex items-center justify-between gap-3">
-                  <label
-                    htmlFor="markup"
-                    className="text-xs font-medium text-[#5b615a]"
-                  >
-                    Markup on cost
+                <div>
+                  <label className="text-xs font-medium text-[#5b615a]">
+                    Product / SKU
                   </label>
-                  <span className="font-mono text-xs tabular-nums">
-                    {pct(markup)}
-                  </span>
+                  <input
+                    value={manual.name}
+                    onChange={(event) => updateManual('name', event.target.value)}
+                    className="mt-1 h-9 w-full rounded-md border border-[#1f2a24]/15 bg-[#fdfbf7] px-2.5 text-sm text-[#1f2a24] outline-none focus-visible:ring-2 focus-visible:ring-[#2f5d50]"
+                  />
                 </div>
-                <input
-                  id="markup"
-                  type="range"
-                  min={0}
-                  max={60}
-                  step={1}
-                  value={Math.round(markup * 100)}
-                  onChange={(event) =>
-                    setMarkup(Number(event.target.value) / 100)
-                  }
-                  className="range mt-3 w-full"
-                />
+
+                <div className="space-y-3 border-t border-[#1f2a24]/10 pt-4">
+                  <p className="text-xs text-[#7b7266]">Cost per unit</p>
+                  <NumberField
+                    label="Direct materials (₱/unit)"
+                    value={manual.materials}
+                    onChange={(value) => updateManual('materials', value)}
+                  />
+                  <NumberField
+                    label="Direct labor (₱/unit)"
+                    value={manual.labor}
+                    onChange={(value) => updateManual('labor', value)}
+                  />
+                  <NumberField
+                    label="Variable overhead (₱/unit)"
+                    value={manual.variableOverhead}
+                    onChange={(value) =>
+                      updateManual('variableOverhead', value)
+                    }
+                  />
+                  <NumberField
+                    label="Packaging (₱/unit)"
+                    value={manual.packaging}
+                    onChange={(value) => updateManual('packaging', value)}
+                    step={0.5}
+                  />
+                  <NumberField
+                    label="Freight-in (₱/unit)"
+                    value={manual.freightIn}
+                    onChange={(value) => updateManual('freightIn', value)}
+                    step={0.5}
+                  />
+                  <NumberField
+                    label="Fixed cost per month (₱)"
+                    value={manual.fixedCost}
+                    onChange={(value) => updateManual('fixedCost', value)}
+                    step={500}
+                    help="Allocate the monthly pool across products so the total does not exceed the pool."
+                  />
+                  <NumberField
+                    label="Expected units per month"
+                    value={manual.expectedUnits}
+                    onChange={(value) => updateManual('expectedUnits', value)}
+                    min={1}
+                    step={50}
+                  />
+                  <NumberField
+                    label="Current selling price (₱)"
+                    value={manual.currentPrice}
+                    onChange={(value) => updateManual('currentPrice', value)}
+                  />
+                </div>
+
+                <div className="space-y-4 border-t border-[#1f2a24]/10 pt-4">
+                  <div>
+                    <div className="flex items-center justify-between gap-3">
+                      <label className="text-xs font-medium text-[#5b615a]">
+                        Target margin
+                      </label>
+                      <span className="font-mono text-xs tabular-nums">
+                        {pct(manual.targetMargin)}
+                      </span>
+                    </div>
+                    <input
+                      type="range"
+                      min={0}
+                      max={80}
+                      step={1}
+                      value={Math.round(manual.targetMargin * 100)}
+                      onChange={(event) =>
+                        updateManual(
+                          'targetMargin',
+                          Number(event.target.value) / 100,
+                        )
+                      }
+                      className="range mt-3 w-full"
+                    />
+                  </div>
+                  <div>
+                    <div className="flex items-center justify-between gap-3">
+                      <label className="text-xs font-medium text-[#5b615a]">
+                        Markup on cost
+                      </label>
+                      <span className="font-mono text-xs tabular-nums">
+                        {pct(manual.markup)}
+                      </span>
+                    </div>
+                    <input
+                      type="range"
+                      min={0}
+                      max={100}
+                      step={5}
+                      value={Math.round(manual.markup * 100)}
+                      onChange={(event) =>
+                        updateManual('markup', Number(event.target.value) / 100)
+                      }
+                      className="range mt-3 w-full"
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-3 border-t border-[#1f2a24]/10 pt-4">
+                  <label className="flex items-center gap-2 text-xs text-[#5b615a]">
+                    <input
+                      type="checkbox"
+                      checked={hasCompetitor}
+                      onChange={(event) => toggleCompetitor(event.target.checked)}
+                      className="h-3.5 w-3.5 accent-[#2f5d50]"
+                    />
+                    I have a competitor price band
+                  </label>
+                  {hasCompetitor && (
+                    <div className="grid grid-cols-2 gap-2">
+                      <NumberField
+                        label="Low (₱)"
+                        value={manual.competitorLow ?? 0}
+                        onChange={(value) =>
+                          updateManual('competitorLow', value)
+                        }
+                      />
+                      <NumberField
+                        label="High (₱)"
+                        value={manual.competitorHigh ?? 0}
+                        onChange={(value) =>
+                          updateManual('competitorHigh', value)
+                        }
+                      />
+                    </div>
+                  )}
+                </div>
+
+                <div className="space-y-3 border-t border-[#1f2a24]/10 pt-4">
+                  <div>
+                    <label className="text-xs font-medium text-[#5b615a]">
+                      DTI SRP category
+                    </label>
+                    <div className="relative mt-1">
+                      <select
+                        value={dtiCategory}
+                        onChange={(event) =>
+                          selectDtiCategory(event.target.value)
+                        }
+                        className="h-10 w-full appearance-none rounded-md border border-[#1f2a24]/15 bg-[#fdfbf7] px-3 pr-9 text-sm text-[#1f2a24] outline-none focus-visible:ring-2 focus-visible:ring-[#2f5d50]"
+                      >
+                        <option value="None">None</option>
+                        {srpData?.categories.map((category) => (
+                          <option key={category.category} value={category.category}>
+                            {category.category}
+                          </option>
+                        ))}
+                      </select>
+                      <ChevronDown
+                        className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#7b7266]"
+                        strokeWidth={1.5}
+                      />
+                    </div>
+                  </div>
+                  {dtiCategoryData && (
+                    <>
+                      <p className="text-[10px] leading-4 text-[#7b7266]">
+                        Latest SRP: {peso(dtiCategoryData.median)} median (
+                        {dtiCategoryData.count} products, {dtiCategoryData.date})
+                      </p>
+                      <NumberField
+                        label="DTI SRP reference (₱)"
+                        value={manual.srpReference ?? dtiCategoryData.median}
+                        onChange={(value) => updateManual('srpReference', value)}
+                        step={0.5}
+                      />
+                    </>
+                  )}
+                  <label className="flex items-start gap-2 text-xs text-[#5b615a]">
+                    <input
+                      type="checkbox"
+                      checked={manual.srpBinding}
+                      onChange={(event) =>
+                        updateManual('srpBinding', event.target.checked)
+                      }
+                      className="mt-0.5 h-3.5 w-3.5 accent-[#2f5d50]"
+                    />
+                    Treat the DTI SRP as a binding legal ceiling
+                  </label>
+                  {manual.srpBinding && (
+                    <p className="text-[10px] leading-4 text-[#a16207]">
+                      Record the legal instrument and date in the decision notes.
+                      Do not treat a suggested retail price as a legal ceiling
+                      without that basis.
+                    </p>
+                  )}
+                </div>
               </div>
-            </div>
+            )}
 
             <div className="mt-8 border-t border-[#1f2a24]/10 pt-5">
               <p className="text-xs text-[#7b7266]">Presentation data</p>
@@ -962,7 +1501,9 @@ function App() {
                 </div>
               </dl>
               <p className="mt-3 text-xs leading-5 text-[#7b7266]">
-                Synthetic records only. Not real MSE data and not the study's final evidence.
+                {mode === 'presentation'
+                  ? "Synthetic records only. Not real MSE data and not the study's final evidence."
+                  : 'Manual inputs are not saved. The portfolio dashboard remains synthetic.'}
               </p>
             </div>
 
@@ -1013,7 +1554,7 @@ function App() {
               </a>
             </nav>
             <div className="text-right text-xs text-[#7b7266]">
-              <p>Synthetic presentation</p>
+              <p>{mode === 'presentation' ? 'Synthetic presentation' : 'Manual inputs'}</p>
               <p className="font-mono">seed 20261105</p>
             </div>
           </header>
@@ -1022,7 +1563,9 @@ function App() {
             <div className="flex flex-col justify-between gap-6 xl:flex-row xl:items-start">
               <div className="max-w-[760px]">
                 <p className="text-xs text-[#7b7266]">
-                  Synthetic presentation · Bulacan manufacturing MSEs
+                  {mode === 'presentation'
+                    ? 'Synthetic presentation · Bulacan manufacturing MSEs'
+                    : 'Manual inputs · Bulacan manufacturing MSEs'}
                 </p>
                 <h1 className="mt-3 max-w-[720px] font-display text-[36px] leading-[1.04] tracking-[-0.02em] sm:text-[46px]">
                   A five-scenario price check for manufacturing MSEs in Bulacan
@@ -1065,7 +1608,7 @@ function App() {
                 {
                   label: 'Target-margin price',
                   value: peso(calc.targetMarginPrice),
-                  note: `${pct(targetMargin)} margin on full cost`,
+                  note: `${pct(product.targetMargin)} margin on full cost`,
                 },
                 {
                   label: 'Reference range',
@@ -1189,7 +1732,7 @@ function App() {
                   <thead>
                     <tr className="border-b border-[#1f2a24]/10 text-left text-xs text-[#7b7266]">
                       <th className="px-5 py-3 font-normal sm:px-6">Scenario</th>
-                      <th className="px-4 py-3 font-normal">Price</th>
+                      <th className="px-4 py-3 font-normal">Value</th>
                       <th className="hidden px-4 py-3 font-normal sm:table-cell">Basis</th>
                       <th className="px-5 py-3 font-normal sm:px-6">Status</th>
                     </tr>
@@ -1233,6 +1776,122 @@ function App() {
               </div>
             </section>
 
+              <details className="rounded-xl border border-[#1f2a24]/10 bg-[#fdfbf7] p-5">
+                <summary className="cursor-pointer text-sm font-medium">
+                  How the calculations work
+                </summary>
+                <div className="mt-4 space-y-3 text-xs leading-5 text-[#5b615a]">
+                  <p>
+                    <span className="font-medium text-[#1f2a24]">Variable unit cost</span>
+                    {' = '}materials + labor + variable overhead + packaging + freight-in
+                  </p>
+                  <p>
+                    <span className="font-medium text-[#1f2a24]">Fixed cost per unit</span>
+                    {' = '}fixed cost per month / expected units per month
+                  </p>
+                  <p>
+                    <span className="font-medium text-[#1f2a24]">Full-cost floor</span>
+                    {' = '}variable unit cost + fixed cost per unit
+                  </p>
+                  <p>
+                    <span className="font-medium text-[#1f2a24]">Target-margin price</span>
+                    {' = '}full-cost floor / (1 - target margin)
+                  </p>
+                  <p>
+                    <span className="font-medium text-[#1f2a24]">Markup price</span>
+                    {' = '}full-cost floor x (1 + markup)
+                  </p>
+                  <p>
+                    The full-cost floor uses the expected units per month. It is a
+                    price at current volume, not a demand-adjusted breakeven. If
+                    volume is uncertain, change the expected units and compare the
+                    floor.
+                  </p>
+                  <p>
+                    The reference range is the intersection of the full-cost floor
+                    and the market reference. If the floor is above the market
+                    reference, the aid reports an empty range and the gap. It does
+                    not relax the ceiling.
+                  </p>
+                </div>
+              </details>
+
+              {mode === 'manual' && dtiCategoryData && (
+                <details className="rounded-xl border border-[#1f2a24]/10 bg-[#fdfbf7] p-5">
+                  <summary className="cursor-pointer text-sm font-medium">
+                    DTI SRP reference details
+                  </summary>
+                  <div className="mt-4 grid grid-cols-2 gap-4 text-xs sm:grid-cols-4">
+                    <div>
+                      <p className="text-[#7b7266]">Category</p>
+                      <p className="mt-1 font-medium">{dtiCategoryData.category}</p>
+                    </div>
+                    <div>
+                      <p className="text-[#7b7266]">Median SRP</p>
+                      <p className="mt-1 font-mono tabular-nums">
+                        {peso(dtiCategoryData.median)}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-[#7b7266]">Range</p>
+                      <p className="mt-1 font-mono tabular-nums">
+                        {peso(dtiCategoryData.min)} to {peso(dtiCategoryData.max)}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-[#7b7266]">Records</p>
+                      <p className="mt-1 font-mono tabular-nums">
+                        {dtiCategoryData.count}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="mt-4 overflow-x-auto">
+                    <table className="w-full min-w-[520px] text-xs">
+                      <thead>
+                        <tr className="border-b border-[#1f2a24]/10 text-left text-[#7b7266]">
+                          <th className="py-2 pr-3 font-normal">Product</th>
+                          <th className="px-3 py-2 font-normal">Unit</th>
+                          <th className="px-3 py-2 font-normal">SRP</th>
+                          <th className="py-2 pl-3 font-normal">Bulletin date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {dtiCategoryData.products.map((item) => (
+                          <tr
+                            key={`${item.product}-${item.unit}-${item.srp}`}
+                            className="border-b border-[#1f2a24]/10 last:border-0"
+                          >
+                            <td className="py-2 pr-3">{item.product}</td>
+                            <td className="px-3 py-2 text-[#5b615a]">{item.unit}</td>
+                            <td className="px-3 py-2 font-mono tabular-nums">
+                              {peso(item.srp)}
+                            </td>
+                            <td className="py-2 pl-3 text-[#5b615a]">{item.date}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                  <p className="mt-3 text-xs leading-5 text-[#7b7266]">
+                    The SRP is a suggested reference unless a specific legal
+                    instrument makes it binding.
+                  </p>
+                </details>
+              )}
+
+              {mode === 'presentation' && (
+                <details className="rounded-xl border border-[#1f2a24]/10 bg-[#fdfbf7] p-5">
+                  <summary className="cursor-pointer text-sm font-medium">
+                    SRP reference details
+                  </summary>
+                  <p className="mt-4 text-xs leading-5 text-[#5b615a]">
+                    The SRP value in this presentation is synthetic. It was
+                    generated by Monte Carlo for demonstration and is not a DTI
+                    bulletin. Switch to Manual to use the real DTI SRP records.
+                  </p>
+                </details>
+              )}
+
               </div>
               <div className="space-y-6">
                 <section className="rounded-xl border border-[#1f2a24]/10 bg-[#fdfbf7] p-5">
@@ -1263,71 +1922,80 @@ function App() {
                       </p>
                     </div>
                   )}
-                </section>
-
-                <section className="rounded-xl border border-[#1f2a24]/10 bg-[#fdfbf7] p-5">
-                  <p className="text-xs text-[#7b7266]">Your decision</p>
-                  <div className="mt-2 flex items-baseline justify-between gap-3">
-                    <span className="font-mono text-[26px] leading-none tabular-nums">
-                      {peso(intendedPrice)}
-                    </span>
-                    <span className="text-xs text-[#7b7266]">per unit</span>
-                  </div>
-                  <input
-                    type="range"
-                    min={0}
-                    max={Math.ceil(
-                      Math.max(
-                        product.currentPrice,
-                        calc.targetMarginPrice,
-                        product.competitorHigh ?? 0,
-                        product.srpReference ?? 0,
-                      ) * 1.25,
-                    )}
-                    step={1}
-                    value={intendedPrice}
-                    onChange={(event) =>
-                      setIntendedPrice(Number(event.target.value))
-                    }
-                    className="range mt-4 w-full"
-                    aria-label="Your intended selling price"
-                  />
-                  <p className="mt-2 text-xs leading-5 text-[#7b7266]">
-                    The aid does not choose this price. Move the marker to compare
-                    your own number with the table.
-                  </p>
-                  <button
-                    type="button"
-                    onClick={recordDecision}
-                    className="mt-4 inline-flex h-10 items-center justify-center rounded-md bg-[#2f5d50] px-4 text-sm font-medium text-[#fdfbf7] transition-colors hover:bg-[#264c41] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2f5d50] focus-visible:ring-offset-2 focus-visible:ring-offset-[#fdfbf7]"
-                  >
-                    Record decision
-                  </button>
-                  {recorded.length > 0 && (
-                    <div className="mt-4 border-t border-[#1f2a24]/10 pt-3">
-                      <p className="text-xs text-[#7b7266]">
-                        Recorded this session
-                      </p>
-                      <ul className="mt-2 space-y-1 text-xs">
-                        {recorded.slice(-3).map((item, index) => (
-                          <li
-                            key={`${item.id}-${index}`}
-                            className="flex items-center justify-between gap-3"
-                          >
-                            <span className="truncate text-[#5b615a]">
-                              {item.id} · {item.state}
-                            </span>
-                            <span className="font-mono tabular-nums">
-                              {peso(item.price)}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                  {calc.notes.length > 0 && (
+                    <ul className="mt-4 space-y-2 border-t border-[#1f2a24]/10 pt-3 text-xs leading-5 text-[#7b7266]">
+                      {calc.notes.map((item) => (
+                        <li key={item} className="flex gap-2">
+                          <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-[#9a9286]" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
                   )}
                 </section>
+
+
               </div>
             </div>
+
+            <section
+              id="decision-log"
+              className="mt-6 overflow-hidden rounded-xl border border-[#1f2a24]/10 bg-[#fdfbf7]"
+            >
+              <div className="border-b border-[#1f2a24]/10 px-5 py-4 sm:px-6">
+                <h2 className="text-lg font-medium">Decision log</h2>
+                <p className="mt-1 text-sm text-[#5b615a]">
+                  The aid records what you decide. It does not decide for you.
+                </p>
+              </div>
+              {recorded.length === 0 ? (
+                <p className="px-5 py-4 text-sm text-[#7b7266] sm:px-6">
+                  No decision recorded in this session yet.
+                </p>
+              ) : (
+                <div className="overflow-x-auto">
+                  <table className="w-full min-w-[760px] text-sm">
+                    <thead>
+                      <tr className="border-b border-[#1f2a24]/10 text-left text-xs text-[#7b7266]">
+                        <th className="px-5 py-3 font-normal sm:px-6">Product</th>
+                        <th className="px-4 py-3 font-normal">Subsector</th>
+                        <th className="px-4 py-3 font-normal">Intended price</th>
+                        <th className="px-4 py-3 font-normal">Range state</th>
+                        <th className="px-4 py-3 font-normal">Reference range</th>
+                        <th className="px-5 py-3 font-normal sm:px-6">Reason</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {recorded.map((item, index) => (
+                        <tr
+                          key={`${item.product}-${index}`}
+                          className="border-b border-[#1f2a24]/10 last:border-0"
+                        >
+                          <td className="px-5 py-3 font-medium sm:px-6">
+                            {item.product}
+                          </td>
+                          <td className="px-4 py-3 text-[#5b615a]">
+                            {item.subsector}
+                          </td>
+                          <td className="px-4 py-3 font-mono tabular-nums">
+                            {peso(item.price)}
+                          </td>
+                          <td className="px-4 py-3 text-[#5b615a]">
+                            {item.state}
+                          </td>
+                          <td className="px-4 py-3 font-mono text-[12px] tabular-nums text-[#5b615a]">
+                            {item.range}
+                          </td>
+                          <td className="px-5 py-3 text-[#5b615a] sm:px-6">
+                            {item.reason || 'No reason recorded'}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+            </section>
 
             <div className="mt-6 grid grid-cols-1 items-start gap-6 xl:grid-cols-[minmax(0,1.25fr)_minmax(320px,0.75fr)]">
               <div className="space-y-6">
@@ -1336,7 +2004,7 @@ function App() {
                   <div>
                     <h2 className="text-lg font-medium">Explanation assistant</h2>
                     <p className="mt-1 text-sm text-[#5b615a]">
-                      Scripted preview of the live Groq explanation layer.
+                      Live Groq explanation with a scripted fallback.
                     </p>
                   </div>
                   <div className="flex overflow-hidden rounded-md border border-[#1f2a24]/15 text-xs">
@@ -1365,22 +2033,50 @@ function App() {
                   </div>
                 </div>
 
+                <label className="mt-5 block text-xs font-medium text-[#5b615a]">
+                  Optional question
+                </label>
+                <input
+                  value={question}
+                  onChange={(event) => setQuestion(event.target.value)}
+                  maxLength={800}
+                  placeholder="For example: Why is the range empty? What is the difference between the floor and the target?"
+                  className="mt-1 h-10 w-full rounded-md border border-[#1f2a24]/15 bg-[#fdfbf7] px-3 text-sm text-[#1f2a24] outline-none placeholder:text-[#9a9286] focus-visible:ring-2 focus-visible:ring-[#2f5d50]"
+                />
                 <button
                   type="button"
-                  onClick={() => setShowExplanation((current) => !current)}
-                  className="mt-5 inline-flex h-10 items-center justify-center gap-2 rounded-md border border-[#1f2a24]/15 bg-[#efe9df] px-4 text-sm font-medium text-[#1f2a24] transition-colors hover:bg-[#e6ddcf] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2f5d50] focus-visible:ring-offset-2 focus-visible:ring-offset-[#fdfbf7]"
+                  onClick={handleExplain}
+                  disabled={assistantLoading}
+                  className="mt-3 inline-flex h-10 items-center justify-center gap-2 rounded-md border border-[#1f2a24]/15 bg-[#efe9df] px-4 text-sm font-medium text-[#1f2a24] transition-colors hover:bg-[#e6ddcf] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2f5d50] focus-visible:ring-offset-2 focus-visible:ring-offset-[#fdfbf7] disabled:cursor-wait disabled:opacity-70"
                 >
-                  {showExplanation ? 'Hide explanation' : 'Explain this table'}
+                  {assistantLoading
+                    ? 'Explaining...'
+                    : showExplanation
+                      ? 'Hide explanation'
+                      : 'Explain this table'}
                 </button>
+                <details className="mt-3 rounded-md border border-[#1f2a24]/10 bg-[#fdfbf7] px-3 py-2 text-xs text-[#5b615a]">
+                  <summary className="cursor-pointer font-medium text-[#1f2a24]">
+                    What the assistant receives
+                  </summary>
+                  <p className="mt-2 leading-5">
+                    Only the five-scenario table, range state, notes, optional
+                    question, and language. It does not receive raw cost inputs,
+                    enterprise identity, or competitor source names.
+                  </p>
+                </details>
 
                 {showExplanation && (
                   <div className="mt-5 border-t border-[#1f2a24]/10 pt-4">
                     <p className="text-sm leading-7 text-[#3f4a43]">
-                      {explanation}
+                      {assistantReply?.text ?? explanation}
                     </p>
                     <p className="mt-3 text-xs leading-5 text-[#7b7266]">
-                      Scripted preview. The live app sends only the five-scenario
-                      table, range state, notes, question, and language to Groq.
+                      {assistantReply
+                        ? assistantReply.usedAi
+                          ? 'Live Groq explanation from the table-only context.'
+                          : `Scripted fallback (${assistantReply.error ?? 'unavailable'}).`
+                        : 'The live proxy uses only the five-scenario table, range state, notes, question, and language.'}
                     </p>
                   </div>
                 )}
@@ -1454,6 +2150,40 @@ function App() {
                       </dd>
                     </div>
                   </dl>
+                  <details className="mt-4 border-t border-[#1f2a24]/10 pt-3 text-xs text-[#5b615a]">
+                    <summary className="cursor-pointer font-medium text-[#1f2a24]">
+                      Download the data
+                    </summary>
+                    <ul className="mt-2 space-y-1.5">
+                      <li>
+                        <a
+                          className="underline decoration-[#7b7266]/40 underline-offset-2 hover:text-[#1f2a24]"
+                          href="./synthetic_presentation_monte_carlo.csv"
+                          download
+                        >
+                          Synthetic presentation CSV
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          className="underline decoration-[#7b7266]/40 underline-offset-2 hover:text-[#1f2a24]"
+                          href="./synthetic_presentation_monte_carlo_summary.json"
+                          download
+                        >
+                          Monte Carlo summary JSON
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          className="underline decoration-[#7b7266]/40 underline-offset-2 hover:text-[#1f2a24]"
+                          href="./srp.json"
+                          download
+                        >
+                          DTI SRP reference JSON
+                        </a>
+                      </li>
+                    </ul>
+                  </details>
                 </section>
 
                 <section

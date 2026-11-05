@@ -1,0 +1,55 @@
+{
+  "dataset": "SmartPricing synthetic presentation dataset",
+  "purpose": "Presentation and software testing only; not real MSE data and not for final validation.",
+  "generated_on": "2026-11-05",
+  "seed": 20261105,
+  "records": 200,
+  "subsectors": {
+    "Handicrafts": 60,
+    "Garments": 46,
+    "Food processing": 33,
+    "Furniture": 32,
+    "Other light manufacturing": 29
+  },
+  "columns": [
+    "product_id",
+    "subsector",
+    "product_name",
+    "materials",
+    "labor",
+    "variable_overhead",
+    "packaging",
+    "freight_in",
+    "fixed_cost_month",
+    "expected_units",
+    "current_price",
+    "target_margin",
+    "markup",
+    "competitor_low",
+    "competitor_high",
+    "srp_reference",
+    "srp_binding",
+    "is_synthetic",
+    "data_note"
+  ],
+  "monte_carlo_inputs": {
+    "materials": "triangular by subsector",
+    "labor": "triangular by subsector",
+    "variable_overhead": "triangular by subsector",
+    "packaging": "triangular by subsector",
+    "freight_in": "triangular by subsector",
+    "fixed_cost_month": "triangular by subsector",
+    "expected_units": "triangular by subsector",
+    "target_margin": "triangular by subsector",
+    "markup": "triangular by subsector",
+    "current_price": "full-cost floor x triangular(0.80, 1.45, 1.05)",
+    "competitor_band": "lognormal center with 15% no-competitor probability",
+    "srp_reference": "food processing only, 60% probability; binding ceiling rare"
+  },
+  "descriptive_summary": {
+    "mean_full_cost_floor": 500.17,
+    "share_current_price_below_full_cost": 0.205,
+    "share_with_competitor_band": 0.885,
+    "share_with_srp_reference": 0.095
+  }
+}
