@@ -1,0 +1,566 @@
+price_date,category,product,unit,srp_php,source_file,source_block,source,is_synthetic,dataset_role
+2023-02-08,CANNED SARDINES IN TOMATO SAUCE,555 Bonus Pack,155g,18.75,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANNED SARDINES IN TOMATO SAUCE,Atami Regular Lid,155g,17.77,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANNED SARDINES IN TOMATO SAUCE,Atami EOC,155g,18.56,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANNED SARDINES IN TOMATO SAUCE,Family's Budget Pack Plain,130g,15.25,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANNED SARDINES IN TOMATO SAUCE,Hakone Regular Lid,155g,13.4,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANNED SARDINES IN TOMATO SAUCE,King Cup Regular Lid,155g,18.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANNED SARDINES IN TOMATO SAUCE,Lucky 7,155g,18.75,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANNED SARDINES IN TOMATO SAUCE,Mariko Regular Lid,155g,18.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANNED SARDINES IN TOMATO SAUCE,Mikado Regular Lid,155g,17.77,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANNED SARDINES IN TOMATO SAUCE,Mikado EOC,155g,18.56,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANNED SARDINES IN TOMATO SAUCE,Saba Phil. Sardines - NCR,155g,17.25,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANNED SARDINES IN TOMATO SAUCE,Saba Phil. Sardines - Luzon/Viz/Min,155g,17.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANNED SARDINES IN TOMATO SAUCE,Toyo Regular Lid,155g,18.72,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANNED SARDINES IN TOMATO SAUCE,Toyo EOC,155g,19.58,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANNED SARDINES IN TOMATO SAUCE,Sallenas Regular Lid,155g,18.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANNED SARDINES IN TOMATO SAUCE,Young’s Town Bonus,155g,13.25,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CONDENSED MILK,Jersey Sweetened Condensed Creamer,390g,42.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CONDENSADA,Alaska,168mL,33.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CONDENSADA,Alaska,300mL,51.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CONDENSADA,Cow Bell,300mL,41.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CONDENSADA,Liberty,168mL,34.75,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CONDENSADA,Liberty,300mL,53.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,EVAPORATED MILK,Angel Filled Milk,410mL,44.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,EVAPORADA,Alaska,370mL,31.56,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,EVAPORADA,Cow Bell,370mL,28.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,POWDERED MILK,Alaska Fortified Powdered Milk Drink,165g,44.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,POWDERED MILK,Anchor Full Cream Milk,150g,73.3,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,POWDERED MILK,Jersey Fortified Instant Powdered Milk Drink,300g,96.25,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,POWDERED MILK,Bear Brand,135g,50.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,POWDERED MILK,Birch Tree Full Cream Milk,150g,64.75,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,COFFEE REFILL,Blend 45 - Supermarket,25g,18.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,COFFEE REFILL,Great Taste (Granules) SMKT,25g,21.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,COFFEE REFILL,Great Taste (Premium) SMKT,25g,19.75,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,COFFEE REFILL,Nescafe Classic,25g,21.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,COFFEE REFILL,Great Taste (Granules) SMKT,50g,41.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,COFFEE REFILL,Great Taste (Premium) SMKT,50g,38.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,COFFEE REFILL,Nescafe Classic,50g,43.25,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,COFFEE 3-in-1 ORIGINAL,Blend 45,20g,4.1,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,COFFEE 3-in-1 ORIGINAL,Café Puro,17g,4.7,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,COFFEE 3-in-1 ORIGINAL,Great Taste Original Twin Pack,33g,8.25,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,COFFEE 3-in-1 ORIGINAL,Kopiko Black,30g,8.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,COFFEE 3-in-1 ORIGINAL,Nescafe Original,28g,7.25,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,COFFEE 3-in-1 ORIGINAL,San Mig Coffee 3-in-1 Original,20g,6.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,BREAD,Pinoy Tasty,450g,40.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,BREAD,Pinoy Pandesal (10pcs./pack),250g,25.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,INSTANT NOODLES CHICKEN & BEEF FLAVOR,"Ho-Mi (Instant Mami Chicken & Garlic, Instant Mami Beef Brisket)",55g,8.4,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,INSTANT NOODLES CHICKEN & BEEF FLAVOR,Lucky Me! (Instant Mami Chicken na Chicken and Instant Mami Beef na Beef),55g,8.75,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,INSTANT NOODLES CHICKEN & BEEF FLAVOR,Payless (Instant Mami Chicken and Instant Mami Beef),55g,7.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,INSTANT NOODLES CHICKEN & BEEF FLAVOR,Quick Chow (Instant Mami Beef and Instant Mami Chicken),55g,7.25,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,IODIZED ROCK SALT,Lasap Rock Salt,250g,7.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,IODIZED ROCK SALT,Fidel Coarse (Red) - Luzon,250g,10.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,IODIZED ROCK SALT,Fidel Coarse (Red) - Visayas & Mindanao,250g,11.25,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,IODIZED ROCK SALT,Lasap Rock Salt,500g,12.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,IODIZED ROCK SALT,Fidel Coarse (Red) - Luzon,500g,19.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,IODIZED ROCK SALT,Fidel Coarse (Red) - Visayas & Mindanao,500g,21.75,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,IODIZED ROCK SALT,Lasap Rock Salt,1kg,23.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,IODIZED SALT,Lasap Iodized Salt,100g,4.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,IODIZED SALT,Lasap Iodized Salt,250g,9.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,IODIZED SALT,Fidel Free Flowing (Green) - Luzon,250g,11.75,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,IODIZED SALT,Fidel Free Flowing (Green) - Visayas & Mindanao,250g,12.75,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,IODIZED SALT,Fidel Refined (Blue) - Luzon,250g,10.75,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,IODIZED SALT,Fidel Refined (Blue) - Visayas & Mindanao,250g,11.75,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,IODIZED SALT,Lasap Iodized Salt,500g,16.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,IODIZED SALT,Fidel Free Flowing (Green) - Luzon,500g,22.75,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,IODIZED SALT,Fidel Free Flowing (Green) - Visayas & Mindanao,500g,23.25,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,IODIZED SALT,Fidel Refined (Blue) - Luzon,500g,21.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,IODIZED SALT,Fidel Refined (Blue) - Visayas & Mindanao,500g,21.25,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,IODIZED SALT,Lasap Iodized Salt,1kg,29.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,DETERGENT SOAP/LAUNDRY SOAP,Bareta Bar FabCon - Visayas & Mindanao,360g,19.75,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,DETERGENT SOAP/LAUNDRY SOAP,"Bareta Bar (Blue, Speckled Blue, White, Kalamansi) - Visayas & Mindanao",360g,18.25,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,DETERGENT SOAP/LAUNDRY SOAP,"Budget Bar (White Anti Bac, With Fabcon, Kalamansi, Power Blue, Speckled Blue) - Luzon Only",360g,18.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,DETERGENT SOAP/LAUNDRY SOAP,"Bonux - Flower Fiesta, Kalamansi Zest",380g,21.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,DETERGENT SOAP/LAUNDRY SOAP,Champion Bar (Supra Clean and Citrus Fresh),370g,23.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,DETERGENT SOAP/LAUNDRY SOAP,"Speed Long Bar (White, Speckled Blue, Kalamansi) - Luzon",360g,21.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,DETERGENT SOAP/LAUNDRY SOAP,"Speed Long Bar (White, Speckled Blue, Kalamansi) - Visayas & Mindanao",360g,21.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,DETERGENT SOAP/LAUNDRY SOAP,Speed Long Bar Blue - Luzon,360g,20.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,DETERGENT SOAP/LAUNDRY SOAP,Speed Long Bar Blue - Visayas & Mindanao,360g,20.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,DETERGENT SOAP/LAUNDRY SOAP,"Sulit Bar (Blue, White, Kalamansi, Speckled Blue) - Visayas & Mindanao",360g,17.75,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,DETERGENT SOAP/LAUNDRY SOAP,Surf Oxybubbles Bar (Blue),360g,21.75,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,DETERGENT SOAP/LAUNDRY SOAP,Surf Oxybubbles Bar (Kalamansi),360g,23.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,DETERGENT SOAP/LAUNDRY SOAP,Surf Oxybubbles Bar (Tawas),360g,23.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,DETERGENT SOAP/LAUNDRY SOAP,Tide Bar Original Scent,380g,24.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,DISTILLED WATER,Absolute,350mL,12.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,DISTILLED WATER,Absolute,500mL,16.25,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,DISTILLED WATER,Absolute,1L,27.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,DISTILLED WATER,Absolute,6L,82.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,DISTILLED WATER,SM Bonus,325mL,6.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,DISTILLED WATER,SM Bonus,500mL,8.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,DISTILLED WATER,SM Bonus,6L,50.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,DISTILLED WATER,Wilkins,330mL,12.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,DISTILLED WATER,Wilkins,500mL,17.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,DISTILLED WATER,Wilkins,1L,25.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,DISTILLED WATER,Wilkins,7L,88.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,PURIFIED WATER,Magnolia Pure,355mL,8.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,PURIFIED WATER,Magnolia Pure,500mL,10.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,PURIFIED WATER,Magnolia Pure,1L,19.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,PURIFIED WATER,Natures Spring,500mL,9.9,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,PURIFIED WATER,Natures Spring,1L,15.4,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,PURIFIED WATER,Refresh,500mL,6.75,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,PURIFIED WATER,SM Bonus,300mL,5.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,PURIFIED WATER,Wilkins Pure,500mL,11.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,PURIFIED WATER,Wilkins Pure,1L,18.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,MINERALIZED WATER,Hidden Spring,330mL,8.8,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,MINERALIZED WATER,Hidden Spring,500mL,12.1,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,MINERALIZED WATER,Refresh,350mL,6.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,MINERALIZED WATER,Refresh,500mL,8.25,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,MINERALIZED WATER,Robinsons Mall,500mL,10.45,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,MINERALIZED WATER,Summit,350mL,11.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,MINERALIZED WATER,Summit,500mL,14.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,MINERALIZED WATER,Summit,1L,22.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,MINERALIZED WATER,Summit,6L,75.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,MINERALIZED WATER,Supersavers Nature’s Pure,330mL,7.15,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,MINERALIZED WATER,Supersavers Nature’s Pure,500mL,8.7,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,MINERALIZED WATER,Viva - Nationwide,330mL,10.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,MINERALIZED WATER,Viva - Nationwide,500mL,13.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,MINERALIZED WATER,Viva - Nationwide,1L,19.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,5-Star Esperma White (20pcs./pack),#03,49.83,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,5-Star Esperma White (25pcs./pack),#06,106.1,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,5-Star Esperma White (5pcs./pack),#08,137.93,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,5-Star Esperma White (4pcs./pack),#14,33.42,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,5-Star Esperma White (2pcs./pack),#22,108.22,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,Export Candles White (20pcs./pack),#03,39.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,Export Candles White (20pcs./pack),#05,60.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,Export Candles White (20pcs./pack),#06,85.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,Export Candles White (12pcs./pack),#08,60.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,Export Candles White (10pcs./pack),#10,72.75,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,Export Candles White (10pcs./pack),#12,72.75,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,Export Candles White (8pcs./pack),#14,72.75,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,Export Candles White (4pcs./pack),#16,36.25,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,Export Candles White (4pcs./pack),#18,48.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,Export Candles White (4pcs./pack),#19,97.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,Export Candles White (2pcs./pack),#20x2,66.75,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,Export Candles White (4pcs./pack),#20x4,121.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,Export Vigil Candles White/Yellow (12pcs./pack),#01,60.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,Export Vigil Candles White/Yellow (4pcs./pack),#2x4,54.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,Export Vigil Candles White/Yellow (6pcs./pack),#2x6,85.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,Liwanag Esperma Candle White (20pcs./pack),#03,65.78,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,Liwanag Esperma Candle White (20pcs./pack),#05,88.05,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,Liwanag Esperma Candle White (4pcs./pack),#16,46.42,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,Liwanag Esperma Candle White (4pcs./pack),#18,76.13,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,Liwanag Esperma Candle White (2pcs./pack),#24,177.71,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,Manila Wax Sperma White (10pcs./pack),#02,54.11,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,Manila Wax Sperma White (20pcs./pack),#03,64.72,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,Manila Wax Sperma White (20pcs./pack),#04,47.74,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,Manila Wax Sperma White (4pcs./pack),#14,54.1,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,Manila Wax Sperma White (2pcs./pack),#16,59.41,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,Manila Wax Votive White/Yellow (6pcs./pack),#01,82.76,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,Manila Wax Votive White/Yellow (6pcs./pack),#02,71.09,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CANDLES,Manila Wax Votive White/Yellow (6pcs./pack),#03,59.41,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,LUNCHEON MEAT,CDO Chinese Style,165g,39.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,LUNCHEON MEAT,Purefoods Chinese Style,165g,33.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,MEAT LOAF,555,150g,19.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,MEAT LOAF,Argentina,150g,23.75,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,MEAT LOAF,CDO,150g,20.75,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,MEAT LOAF,Gusto,150g,16.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,MEAT LOAF,Winner - Supermarket (SMKT),150g,18.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,MEAT LOAF,Argentina,170g,25.25,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CORNED BEEF,Argentina,150g,35.75,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CORNED BEEF,Bingo,150g,22.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CORNED BEEF,El Rancho - SMKT,150g,28.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CORNED BEEF,Star Corned Beef,150g,34.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CORNED BEEF,Winner - SMKT,150g,30.75,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CORNED BEEF,Young’s Town Premium,150g,34.25,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CORNED BEEF,Argentina,175g,40.75,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CORNED BEEF,Ligo Premium - Luzon,175g,35.8,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,CORNED BEEF,Ligo Premium - VizMin,175g,36.2,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,BEEF LOAF,555,150g,19.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,BEEF LOAF,Argentina,150g,22.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,BEEF LOAF,Bingo,150g,18.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,BEEF LOAF,CDO,150g,20.75,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,BEEF LOAF,Purefoods,150g,18.15,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,BEEF LOAF,El Rancho – SMKT,155g,17.75,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,BEEF LOAF,Argentina,170g,25.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,BEEF LOAF,Purefoods,200g,24.9,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,VINEGAR – GIN AND PET BOTTLE,Amihan Cane – SMKT,350ml,10.4,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,VINEGAR – GIN AND PET BOTTLE,Amihan Cane - Wetmarket (WMKT),350ml,11.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,VINEGAR – GIN AND PET BOTTLE,Datu Puti - White Vinegar – SMKT,350ml,17.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,VINEGAR – GIN AND PET BOTTLE,Datu Puti - White Vinegar - WMKT,350ml,18.03,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,VINEGAR – GIN AND PET BOTTLE,Silver Swan Sukang Puti - SMKT,350ml,17.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,VINEGAR – DOY / REFILL PACK,Silver Swan Sukang Puti Doy Pack - SMKT,200ml,7.9,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,VINEGAR – DOY / REFILL PACK,Silver Swan Sukang Puti Doy Pack - WMKT,200ml,7.95,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,PATIS – GIN / PET BOTTLE,Datu Puti – SMKT,350ml,26.25,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,PATIS – GIN / PET BOTTLE,Datu Puti – WMKT,350ml,27.55,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,PATIS – GIN / PET BOTTLE,Lorins PET Bottle,350ml,23.25,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,PATIS – GIN / PET BOTTLE,Nelicom Special – SMKT,350ml,29.7,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,PATIS – GIN / PET BOTTLE,Nelicom Special – WMKT,350ml,31.25,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,PATIS – GIN / PET BOTTLE,Silver Swan Special,350ml,23.75,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,PATIS – DOY PACK / BUDGET PACK,Lorins – Pouch,150ml,11.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,PATIS – DOY PACK / BUDGET PACK,Lorins – Budget Pouch,350ml,21.25,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,SOY SAUCE – GIN / PET BOTTLE,Datu Puti – SMKT,350ml,19.1,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,SOY SAUCE – GIN / PET BOTTLE,Datu Puti – WMKT,350ml,20.1,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,SOY SAUCE – GIN / PET BOTTLE,Silver Swan - SMKT,350ml,20.25,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,SOY SAUCE – DOY PACK / REFILL PACK,Silver Swan Doy Pack – SMKT,200ml,10.65,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,SOY SAUCE – DOY PACK / REFILL PACK,Silver Swan Doy Pack - WMKT,200ml,10.92,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,TOILET SOAP,Green Cross (Pure Care),55g,13.75,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,TOILET SOAP,Green Cross (Pure Care),85g,23.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,TOILET SOAP,Green Cross (Pure Care),125g,34.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,TOILET SOAP,Safeguard Pure White,60g,19.75,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,TOILET SOAP,Safeguard Pure White,90g,29.25,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,TOILET SOAP,Safeguard Pure White,130g,46.75,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,TOILET SOAP,"Palmolive Naturals - Pinkish Glow (pink), Hydrating Glow (green), White with Natural Papaya, and White with Natural Milk",55g,15.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,BATTERIES,Eveready Heavy Duty Small Red - Pack of 2,AA,27.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,BATTERIES,Eveready Super Heavy Duty Small Black - Pack of 2,AA,39.95,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,BATTERIES,Eveready Heavy Duty Red - Blister Pack of 4,AA,48.0,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,BATTERIES,Energizer Max – Blister Pack of 4,AA,196.5,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,BATTERIES,Eveready Heavy Duty Red – Blister Pack of 2,D,51.25,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2023-02-08,BATTERIES,Eveready Super Heavy Duty Black – Blister Pack of 2,D,77.75,DTI_SRP_BNPC_2023-02-08.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANNED SARDINES IN TOMATO SAUCE,Family's Budget Pack Plain,130g,15.25,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANNED SARDINES IN TOMATO SAUCE,Saba Phil. Sardines - NCR,155g,17.25,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANNED SARDINES IN TOMATO SAUCE,Saba Phil. Sardines - Luzon/Viz/Min,155g,17.5,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANNED SARDINES IN TOMATO SAUCE,Atami Regular Lid,155g,20.5,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANNED SARDINES IN TOMATO SAUCE,Mikado Regular Lid,155g,20.5,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANNED SARDINES IN TOMATO SAUCE,King Cup Regular Lid,155g,18.0,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANNED SARDINES IN TOMATO SAUCE,Mariko Regular Lid,155g,19.75,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANNED SARDINES IN TOMATO SAUCE,Sallenas Regular Lid,155g,18.5,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANNED SARDINES IN TOMATO SAUCE,Atami EOC,155g,21.25,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANNED SARDINES IN TOMATO SAUCE,Mikado EOC,155g,21.25,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANNED SARDINES IN TOMATO SAUCE,Toyo Bonus Green Regular Lid,155g,18.7,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANNED SARDINES IN TOMATO SAUCE,555 Bonus Pack,155g,19.65,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANNED SARDINES IN TOMATO SAUCE,Lucky 7,155g,19.65,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANNED SARDINES IN TOMATO SAUCE,Toyo Bonus Green EOC,155g,19.5,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CONDENSED MILK,Jersey Sweetened Condensed Creamer,390g,44.5,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CONDENSADA,Liberty,168mL,34.75,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CONDENSADA,Cow Bell,300mL,41.0,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CONDENSADA,Liberty,300mL,53.0,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,EVAPORATED MILK,Angel Filled Milk,370mL,48.0,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,POWDERED MILK,Bear Brand,135g,50.0,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,POWDERED MILK,Birch Tree Full Cream Milk,150g,70.75,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,POWDERED MILK,Alaska Fortified Powdered Milk Drink,165g,44.0,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,POWDERED MILK,Jersey Fortified Instant Powdered Milk Drink,300g,96.25,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,COFFEE REFILL,Blend 45 Pure Soluble - Supermarket,25g,20.25,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,COFFEE REFILL,Great Taste (Premium) SMKT,25g,21.6,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,COFFEE REFILL,Great Taste (Granules) SMKT,25g,22.0,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,COFFEE REFILL,Great Taste (Premium) SMKT,50g,42.2,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,COFFEE REFILL,Great Taste (Granules) SMKT,50g,43.0,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,COFFEE 3-in-1 ORIGINAL,Café Puro,17g,4.7,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,COFFEE 3-in-1 ORIGINAL,Blend 45 3-in-1 Original,18g,4.5,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,COFFEE 3-in-1 ORIGINAL,San Mig Coffee 3-in-1 Original,20g,7.0,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,COFFEE 3-in-1 ORIGINAL,Nescafe Original,26g,7.75,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,COFFEE 3-in-1 ORIGINAL,Kopiko Black,30g,8.5,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,COFFEE 3-in-1 ORIGINAL,Great Taste Original Twin Pack,33g,8.25,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,BREAD,Pinoy Pandesal (10pcs./pack),250g,27.25,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,BREAD,Pinoy Tasty,450g,44.0,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,INSTANT MAMI NOODLES CHICKEN & BEEF FLAVOR,Payless (Instant Mami Chicken and Instant Mami Beef),55g,7.5,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,INSTANT MAMI NOODLES CHICKEN & BEEF FLAVOR,Quick Chow (Instant Mami Beef and Instant Mami Chicken),55g,7.75,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,INSTANT MAMI NOODLES CHICKEN & BEEF FLAVOR,"Ho-Mi (Instant Mami Chicken & Garlic, Instant Mami Beef Brisket)",55g,8.5,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,INSTANT MAMI NOODLES CHICKEN & BEEF FLAVOR,Lucky Me! (Instant Mami Chicken na Chicken and Instant Mami Beef na Beef),55g,8.75,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,IODIZED ROCK SALT,Lasap Rock Salt,250g,7.5,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,IODIZED ROCK SALT,Fidel Coarse (Red) - Luzon,250g,11.0,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,IODIZED ROCK SALT,Fidel Coarse (Red) - Visayas & Mindanao,250g,11.75,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,IODIZED ROCK SALT,Lasap Rock Salt,500g,13.5,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,IODIZED ROCK SALT,Fidel Coarse (Red) - Luzon,500g,21.25,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,IODIZED ROCK SALT,Fidel Coarse (Red) - Visayas & Mindanao,500g,22.5,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,IODIZED ROCK SALT,Lasap Rock Salt,1kg,25.0,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,IODIZED SALT,Lasap Iodized Salt,100g,4.75,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,IODIZED SALT,Lasap Iodized Salt,250g,9.75,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,IODIZED SALT,Fidel Refined (Blue) - Luzon,250g,11.75,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,IODIZED SALT,Fidel Refined (Blue) - Visayas & Mindanao,250g,12.25,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,IODIZED SALT,Fidel Free Flowing (Green) - Luzon,250g,12.75,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,IODIZED SALT,Fidel Free Flowing (Green) - Visayas & Mindanao,250g,13.5,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,IODIZED SALT,Lasap Iodized Salt,500g,17.25,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,IODIZED SALT,Fidel Refined (Blue) - Luzon,500g,23.0,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,IODIZED SALT,Fidel Refined (Blue) - Visayas & Mindanao,500g,23.25,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,IODIZED SALT,Fidel Free Flowing (Green) - Luzon,500g,25.0,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,IODIZED SALT,Fidel Free Flowing (Green) - Visayas & Mindanao,500g,25.5,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,IODIZED SALT,Lasap Iodized Salt,1kg,31.5,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,DETERGENT SOAP/LAUNDRY SOAP,"Sulit Bar (BLUE, WHITE, KALAMANSI, SPECKLED BLUE) - Visayas and Mindanao",330g,19.25,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,DETERGENT SOAP/LAUNDRY SOAP,"Bareta Bar (BLUE, SPECKLED BLUE, WHITE, KALAMANSI) - Visayas and Mindanao",330g,19.75,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,DETERGENT SOAP/LAUNDRY SOAP,"Budget Bar (WHITE ANTI BAC, FABCON, KALAMANSI, POWER BLUE, SPECKLED BLUE) - Luzon",330g,21.0,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,DETERGENT SOAP/LAUNDRY SOAP,Bareta Bar FABCON Visayas and Mindanao,330g,21.25,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,DETERGENT SOAP/LAUNDRY SOAP,Speed Long Bar BLUE,330g,21.5,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,DETERGENT SOAP/LAUNDRY SOAP,"Speed Long Bar (WHITE, SPECKLED BLUE, KALAMANSI)",330g,22.5,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,DETERGENT SOAP/LAUNDRY SOAP,Surf with ActivClean Technology Blue Bar,360g,21.75,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,DETERGENT SOAP/LAUNDRY SOAP,Surf with ActivClean Technology Kalamansi Bar,360g,23.0,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,DETERGENT SOAP/LAUNDRY SOAP,Surf with ActivClean Technology Tawas Bar,360g,23.0,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,DETERGENT SOAP/LAUNDRY SOAP,"Champion Bar (SUPRA CLEAN, CITRUS FRESH)",370g,23.0,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,DETERGENT SOAP/LAUNDRY SOAP,"Bonux - FLOWER FIESTA, KALAMANSI ZEST",380g,21.0,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,DETERGENT SOAP/LAUNDRY SOAP,Tide Bar ORIGINAL SCENT,380g,24.0,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,DISTILLED WATER,SM Bonus,325mL,6.5,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,DISTILLED WATER,Wilkins,330mL,12.0,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,DISTILLED WATER,Absolute,350mL,12.0,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,DISTILLED WATER,SM Bonus,500mL,8.5,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,DISTILLED WATER,Absolute,500mL,16.25,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,DISTILLED WATER,Wilkins,500mL,17.0,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,DISTILLED WATER,Wilkins,1L,25.0,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,DISTILLED WATER,Absolute,1L,25.0,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,DISTILLED WATER,Absolute,6L,82.0,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,DISTILLED WATER,SM Bonus,6.6L,54.5,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,DISTILLED WATER,Wilkins,7L,88.0,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,PURIFIED WATER,SM Bonus,300mL,5.0,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,PURIFIED WATER,Magnolia Pure,355mL,8.5,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,PURIFIED WATER,Refresh,500mL,6.75,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,PURIFIED WATER,Natures Spring,500mL,10.5,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,PURIFIED WATER,Magnolia Pure,500mL,10.5,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,PURIFIED WATER,Wilkins Pure,500mL,11.0,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,PURIFIED WATER,Natures Spring,1L,16.5,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,PURIFIED WATER,Wilkins Pure,1L,18.0,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,PURIFIED WATER,Magnolia Pure,1L,19.5,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,MINERALIZED WATER,Supersavers Nature’s Pure,330mL,7.15,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,MINERALIZED WATER,Hidden Spring,330mL,8.8,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,MINERALIZED WATER,Viva - Nationwide,330mL,10.0,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,MINERALIZED WATER,Refresh,350mL,6.0,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,MINERALIZED WATER,Summit,350mL,10.0,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,MINERALIZED WATER,Refresh,500mL,8.25,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,MINERALIZED WATER,Supersavers Nature’s Pure,500mL,8.7,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,MINERALIZED WATER,Robinsons Mall,500mL,10.45,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,MINERALIZED WATER,Hidden Spring,500mL,12.1,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,MINERALIZED WATER,Viva - Nationwide,500mL,13.0,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,MINERALIZED WATER,Summit,500mL,12.0,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,MINERALIZED WATER,Viva - Nationwide,1L,19.0,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,MINERALIZED WATER,Summit,1L,19.5,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,MINERALIZED WATER,Summit,6L,75.0,DTI_SRP_BNPC_2025-02-01.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,Export Vigil Candles White/Yellow (12pcs./pack),#01,60.5,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,Manila Wax Votive White/Yellow (6pcs./pack),#01,82.76,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,Manila Wax Sperma White (10pcs./pack),#02,54.11,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,Manila Wax Votive White/Yellow (6pcs./pack),#02,71.09,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,Export Candles White (20pcs./pack),#03,39.0,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,5-Star Esperma White (20pcs./pack),#03,54.25,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,Manila Wax Votive White/Yellow (6pcs./pack),#03,59.41,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,Manila Wax Sperma White (20pcs./pack),#03,64.72,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,Liwanag Esperma Candle White (20pcs./pack),#03,65.78,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,Manila Wax Sperma White (20pcs./pack),#04,47.74,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,Export Candles White (20pcs./pack),#05,60.5,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,Liwanag Esperma Candle White (20pcs./pack),#05,88.05,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,Export Candles White (20pcs./pack),#06,85.0,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,5-Star Esperma White (25pcs./pack),#06,115.5,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,Export Candles White (12pcs./pack),#08,60.5,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,5-Star Esperma White (5pcs./pack),#08,150.25,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,Export Candles White (10pcs./pack),#10,72.75,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,Export Candles White (10pcs./pack),#12,72.75,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,5-Star Esperma White (4pcs./pack),#14,36.25,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,Manila Wax Sperma White (4pcs./pack),#14,54.1,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,Export Candles White (8pcs./pack),#14,72.75,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,Export Candles White (4pcs./pack),#16,36.25,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,Liwanag Esperma Candle White (4pcs./pack),#16,46.42,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,Manila Wax Sperma White (2pcs./pack),#16,59.41,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,Export Candles White (4pcs./pack),#18,48.5,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,Liwanag Esperma Candle White (4pcs./pack),#18,76.13,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,Export Candles White (4pcs./pack),#19,97.0,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,Export Candles White (2pcs./pack),#20x2,66.75,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,Export Candles White (4pcs./pack),#20x4,121.5,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,5-Star Esperma White (2pcs./pack),#22,117.75,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,Liwanag Esperma Candle White (2pcs./pack),#24,177.71,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,Export Vigil Candles White/Yellow (4pcs./pack),#2x4,54.5,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CANDLES,Export Vigil Candles White/Yellow (6pcs./pack),#2x6,85.0,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,LUNCHEON MEAT,Purefoods Chinese Style,165g,33.5,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,LUNCHEON MEAT,CDO Chinese Style,165g,41.0,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,MEAT LOAF,Winner - Supermarket (SMKT),150g,18.0,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,MEAT LOAF,555,150g,19.5,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,MEAT LOAF,CDO,150g,21.75,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,MEAT LOAF,Argentina,150g,23.75,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,MEAT LOAF,Argentina,170g,25.25,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CORNED BEEF,Bingo,150g,23.0,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CORNED BEEF,El Rancho - SMKT,150g,31.25,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CORNED BEEF,Winner - SMKT,150g,33.75,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CORNED BEEF,Star Corned Beef,150g,34.0,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CORNED BEEF,Young’s Town Premium,150g,34.25,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CORNED BEEF,Argentina,150g,35.75,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,CORNED BEEF,Argentina,175g,40.75,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,BEEF LOAF,Purefoods,150g,18.15,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,BEEF LOAF,Bingo,150g,19.5,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,BEEF LOAF,555,150g,19.5,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,BEEF LOAF,CDO,150g,21.75,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,BEEF LOAF,Argentina,150g,22.0,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,BEEF LOAF,El Rancho – SMKT,155g,19.5,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,BEEF LOAF,Argentina,170g,25.0,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,BEEF LOAF,Purefoods,200g,24.9,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,VINEGAR – GIN AND PET BOTTLE,Datu Puti - White Vinegar – SMKT,350ml,18.0,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,VINEGAR – GIN AND PET BOTTLE,Silver Swan Sukang Puti - SMKT,350ml,18.0,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,VINEGAR – GIN AND PET BOTTLE,Datu Puti - White Vinegar - WMKT,350ml,18.75,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,VINEGAR – DOY / REFILL PACK,Silver Swan Sukang Puti Doy Pack - SMKT,200ml,8.25,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,VINEGAR – DOY / REFILL PACK,Silver Swan Sukang Puti Doy Pack - WMKT,200ml,8.5,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,PATIS – GIN / PET BOTTLE,Lorins PET Bottle,350ml,23.25,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,PATIS – GIN / PET BOTTLE,Silver Swan Special,350ml,24.5,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,PATIS – GIN / PET BOTTLE,Datu Puti – SMKT,350ml,27.0,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,PATIS – GIN / PET BOTTLE,Datu Puti – WMKT,350ml,28.25,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,PATIS – GIN / PET BOTTLE,Nelicom Special – SMKT,350ml,30.5,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,PATIS – GIN / PET BOTTLE,Nelicom Special – WMKT,350ml,31.75,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,PATIS – DOY PACK / BUDGET PACK,Lorins – Pouch,150ml,11.5,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,PATIS – DOY PACK / BUDGET PACK,Lorins – Budget Pouch,350ml,21.25,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,SOY SAUCE – GIN / PET BOTTLE,Datu Puti – SMKT,350ml,19.75,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,SOY SAUCE – GIN / PET BOTTLE,Datu Puti – WMKT,350ml,20.5,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,SOY SAUCE – GIN / PET BOTTLE,Silver Swan - SMKT,350ml,20.75,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,SOY SAUCE – DOY PACK / REFILL PACK,Silver Swan Doy Pack – SMKT,200ml,11.0,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,SOY SAUCE – DOY PACK / REFILL PACK,Silver Swan Doy Pack - WMKT,200ml,11.5,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,TOILET SOAP,Green Cross (Pure Care),55g,15.0,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,TOILET SOAP,"Palmolive Naturals - Pinkish Glow (pink), Hydrating Glow (green), White with Natural Papaya, and White with Natural Milk",55g,17.0,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,TOILET SOAP,Safeguard Pure White,55g,22.0,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,TOILET SOAP,Green Cross (Pure Care),85g,25.75,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,TOILET SOAP,Safeguard Pure White,82g,31.25,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,TOILET SOAP,Green Cross (Pure Care),125g,37.25,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,TOILET SOAP,Safeguard Pure White,119g,49.0,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,BATTERIES,Eveready Heavy Duty Small Red - Pack of 2,AA,27.0,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,BATTERIES,Eveready Heavy Duty Red - Blister Pack of 4,AA,48.0,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,BATTERIES,Eveready Super Heavy Duty Small Black - Pack of 2,AA,39.95,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,BATTERIES,Energizer Max – Blister Pack of 4,AA,206.25,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,BATTERIES,Eveready Heavy Duty Red – Blister Pack of 2,D,51.25,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2025-02-01,BATTERIES,Eveready Super Heavy Duty Black – Blister Pack of 2,D,77.75,DTI_SRP_BNPC_2025-02-01.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANNED SARDINES IN TOMATO SAUCE,Saba Philippines Sardines,155g,21.5,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANNED SARDINES IN TOMATO SAUCE,Atami Regular Lid,155g,22.5,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANNED SARDINES IN TOMATO SAUCE,Mikado Regular Lid,155g,22.5,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANNED SARDINES IN TOMATO SAUCE,King Cup Regular Lid,155g,18.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANNED SARDINES IN TOMATO SAUCE,Mariko Regular Lid,155g,23.75,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANNED SARDINES IN TOMATO SAUCE,Sallenas Regular Lid,155g,24.75,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANNED SARDINES IN TOMATO SAUCE,Atami EOC,155g,23.25,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANNED SARDINES IN TOMATO SAUCE,Mikado EOC,155g,23.25,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANNED SARDINES IN TOMATO SAUCE,555 Bonus Pack,155g,20.5,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANNED SARDINES IN TOMATO SAUCE,Lucky 7,155g,20.5,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANNED SARDINES IN TOMATO SAUCE,Toyo Bonus Green EOC,155g,20.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CONDENSED MILK,Jersey Sweetened Condensed Creamer,390g,44.5,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,EVAPORATED MILK,Angel Filled Milk,370mL,48.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,POWDERED MILK,Bear Brand,135g,50.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,POWDERED MILK,Birch Tree Full Cream Milk,150g,70.75,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,POWDERED MILK,Jersey Fortified Instant Powdered Milk Drink,300g,96.25,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,COFFEE 3-in-1 ORIGINAL,Café Puro,17g,4.7,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,COFFEE 3-in-1 ORIGINAL,Blend 45 3-in-1 Original,18g,5.5,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,COFFEE 3-in-1 ORIGINAL,San Mig Coffee 3-in-1 Original,20g,7.5,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,COFFEE 3-in-1 ORIGINAL,Nescafe Original,20g,7.75,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,COFFEE 3-in-1 ORIGINAL,Kopiko Black,30g,8.5,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,COFFEE 3-in-1 ORIGINAL,Great Taste Original Twin Pack,33g,10.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,BREAD,Pinoy Pandesal (10pcs./pack),250g,27.25,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,BREAD,Pinoy Tasty,450g,44.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,INSTANT MAMI NOODLES CHICKEN & BEEF FLAVOR,Payless (Chicken Espesyal and Beef Paborito Flavor),55g,7.5,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,INSTANT MAMI NOODLES CHICKEN & BEEF FLAVOR,Quick Chow (Instant Mami Beef and Instant Mami Chicken),55g,7.75,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,INSTANT MAMI NOODLES CHICKEN & BEEF FLAVOR,"Ho-Mi (Instant Mami Chicken & Garlic, Instant Mami Beef Brisket)",55g,9.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,INSTANT MAMI NOODLES CHICKEN & BEEF FLAVOR,Lucky Me! (Instant Mami Chicken na Chicken and Instant Mami Beef na Beef),55g,9.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,IODIZED ROCK SALT,Lasap Rock Salt,250g,7.5,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,IODIZED ROCK SALT,Fidel Coarse (Red) - Luzon,250g,11.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,IODIZED ROCK SALT,Fidel Coarse (Red) - Visayas / Mindanao,250g,11.75,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,IODIZED ROCK SALT,Lasap Rock Salt,500g,13.5,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,IODIZED ROCK SALT,Fidel Coarse (Red) - Luzon,500g,21.25,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,IODIZED ROCK SALT,Fidel Coarse (Red) - Visayas/ Mindanao,500g,22.5,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,IODIZED ROCK SALT,Lasap Rock Salt,1kg,25.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,IODIZED SALT,Lasap Iodized Salt,100g,4.75,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,IODIZED SALT,Lasap Iodized Salt,250g,9.75,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,IODIZED SALT,Fidel Refined (Blue) - Luzon,250g,11.75,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,IODIZED SALT,Fidel Refined (Blue) - Visayas / Mindanao,250g,12.25,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,IODIZED SALT,Fidel Free Flowing (Green) - Luzon,250g,12.75,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,IODIZED SALT,Fidel Free Flowing (Green) - Visayas & Mindanao,250g,13.5,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,IODIZED SALT,Lasap Iodized Salt,500g,17.25,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,IODIZED SALT,Fidel Refined (Blue) - Luzon,500g,23.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,IODIZED SALT,Fidel Refined (Blue) - Visayas & Mindanao,500g,23.25,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,IODIZED SALT,Fidel Free Flowing (Green) - Luzon,500g,25.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,IODIZED SALT,Fidel Free Flowing (Green) - Visayas & Mindanao,500g,25.5,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,IODIZED SALT,Lasap Iodized Salt,1kg,31.5,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,DISTILLED WATER,SM Bonus,325mL,6.5,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,DISTILLED WATER,Wilkins,330mL,12.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,DISTILLED WATER,Absolute,350mL,12.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,DISTILLED WATER,SM Bonus,500mL,8.5,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,DISTILLED WATER,Absolute,500mL,16.75,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,DISTILLED WATER,Wilkins,500mL,17.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,DISTILLED WATER,Wilkins,1L,25.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,DISTILLED WATER,Absolute,1L,25.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,DISTILLED WATER,Absolute,6L,83.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,,SM Bonus,6.6L,54.5,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,,Wilkins,7L,90.0,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,PURIFIED WATER,SM Bonus,300mL,5.0,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,PURIFIED WATER,Magnolia Pure,355mL,8.5,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,PURIFIED WATER,Refresh,500mL,6.75,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,PURIFIED WATER,Natures Spring,500mL,10.5,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,PURIFIED WATER,Magnolia Pure,500mL,10.5,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,PURIFIED WATER,Wilkins Pure,500mL,11.0,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,PURIFIED WATER,Natures Spring,1L,16.5,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,PURIFIED WATER,Wilkins Pure,1L,18.0,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,PURIFIED WATER,Magnolia Pure,1L,19.5,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,MINERALIZED WATER,Supersavers Nature’s Pure,330mL,7.15,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,MINERALIZED WATER,Hidden Spring,330mL,8.8,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,MINERALIZED WATER,Viva - Nationwide,330mL,10.0,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,MINERALIZED WATER,Refresh,350mL,6.6,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,MINERALIZED WATER,Summit,350mL,10.0,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,MINERALIZED WATER,Refresh,500mL,9.15,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,MINERALIZED WATER,Supersavers Nature’s Pure,500mL,8.7,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,MINERALIZED WATER,Robinsons Mall,500mL,10.45,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,MINERALIZED WATER,Hidden Spring,500mL,12.1,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,MINERALIZED WATER,Viva - Nationwide,500mL,13.0,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,MINERALIZED WATER,Summit,500mL,12.0,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,MINERALIZED WATER,Viva - Nationwide,1L,19.0,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,MINERALIZED WATER,Summit,1L,19.5,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,MINERALIZED WATER,Summit,6L,75.0,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,DETERGENT SOAP/LAUNDRY SOAP,"Sulit Bar (BLUE, WHITE, KALAMANSI, SPECKLED BLUE) - Visayas / Mindanao",330g,21.0,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,DETERGENT SOAP/LAUNDRY SOAP,"Bareta Bar (BLUE, SPECKLED BLUE, WHITE, KALAMANSI) - Visayas / Mindanao",330g,21.75,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,DETERGENT SOAP/LAUNDRY SOAP,"Budget Bar (WHITE ANTI BAC, FABCON, KALAMANSI, POWER BLUE, SPECKLED BLUE) - Luzon",330g,21.0,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,DETERGENT SOAP/LAUNDRY SOAP,Bareta Bar FABCON - Visayas / Mindanao,330g,23.25,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,DETERGENT SOAP/LAUNDRY SOAP,"Speed Long Bar (WHITE, BLUE, SPECKLED BLUE, KALAMANSI)",370g,25.75,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,DETERGENT SOAP/LAUNDRY SOAP,Surf Detergent Bar Active Clean Power Bula Power Puti - BLUE,360g,23.25,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,DETERGENT SOAP/LAUNDRY SOAP,"Surf Detergent Bar Active Clean Power Bula Power Puti (KALAMANSI, TAWAS)",360g,24.5,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,DETERGENT SOAP/LAUNDRY SOAP,"Champion Bar (SUPRA CLEAN, CITRUS FRESH)",370g,25.0,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,DETERGENT SOAP/LAUNDRY SOAP,"Bonux (FLOWER FIESTA, KALAMANSI ZEST)",380g,21.0,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,DETERGENT SOAP/LAUNDRY SOAP,Tide Bar ORIGINAL SCENT,380g,24.0,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANDLES,Export Vigil Candles White/Yellow (12pcs./pack),#01,60.5,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANDLES,Manila Wax Votive White/Yellow (6pcs./pack),#01,82.76,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANDLES,Manila Wax Sperma White (10pcs./pack),#02,54.11,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANDLES,Manila Wax Votive White/Yellow (6pcs./pack),#02,71.09,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANDLES,Export Candles White (20pcs./pack),#03,39.0,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANDLES,5-Star Esperma White (20pcs./pack),#03,54.25,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANDLES,Manila Wax Votive White/Yellow (6pcs./pack),#03,59.41,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANDLES,Manila Wax Sperma White (20pcs./pack),#03,64.72,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANDLES,Liwanag Esperma Candle White (20pcs./pack),#03,81.0,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANDLES,Manila Wax Sperma White (20pcs./pack),#04,47.74,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANDLES,Export Candles White (20pcs./pack),#05,60.5,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANDLES,Liwanag Esperma Candle White (20pcs./pack),#05,109.75,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANDLES,Export Candles White (20pcs./pack),#06,85.0,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANDLES,5-Star Esperma White (25pcs./pack),#06,115.5,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANDLES,Export Candles White (12pcs./pack),#08,60.5,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANDLES,5-Star Esperma White (5pcs./pack),#08,150.25,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANDLES,Export Candles White (10pcs./pack),#10,72.75,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANDLES,Export Candles White (10pcs./pack),#12,72.75,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANDLES,5-Star Esperma White (4pcs./pack),#14,36.25,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANDLES,Manila Wax Sperma White (4pcs./pack),#14,54.1,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANDLES,Export Candles White (8pcs./pack),#14,72.75,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CANDLES,Export Candles White (4pcs./pack),#16,36.25,DTI_SRP_BNPC_2026-05-11.pdf,1,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,,Liwanag Esperma Candle White (4pcs./pack),#16,57.75,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,,Manila Wax Sperma White (2pcs./pack),#16,59.41,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,,Export Candles White (4pcs./pack),#18,48.5,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,,Liwanag Esperma Candle White (4pcs./pack),#18,94.75,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,,Export Candles White (4pcs./pack),#19,97.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,,Export Candles White (2pcs./pack),#20x2,66.75,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,,Export Candles White (4pcs./pack),#20x4,121.5,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,,5-Star Esperma White (2pcs./pack),#22,117.75,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,,Liwanag Esperma Candle White (2pcs./pack),#24,220.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,,Export Vigil Candles White/Yellow (4pcs./pack),#2x4,54.5,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,,Export Vigil Candles White/Yellow (6pcs./pack),#2x6,85.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,LUNCHEON MEAT,Purefoods Chinese Style,165g,40.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,LUNCHEON MEAT,CDO Chinese Style,165g,41.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,MEAT LOAF,Winner - Supermarket (SMKT),150g,18.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,MEAT LOAF,555,150g,19.5,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,MEAT LOAF,CDO,150g,21.75,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,MEAT LOAF,Argentina,150g,23.75,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,MEAT LOAF,Argentina,170g,25.25,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CORNED BEEF,Bingo,150g,23.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CORNED BEEF,El Rancho - SMKT,150g,31.25,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CORNED BEEF,Winner - SMKT,150g,33.75,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CORNED BEEF,Star Corned Beef,150g,34.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CORNED BEEF,Young’s Town Premium,150g,34.25,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CORNED BEEF,Argentina,150g,36.75,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,CORNED BEEF,Argentina,175g,41.75,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,BEEF LOAF,Purefoods,150g,18.15,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,BEEF LOAF,Bingo,150g,19.5,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,BEEF LOAF,555,150g,19.5,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,BEEF LOAF,CDO,150g,21.75,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,BEEF LOAF,Argentina,150g,22.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,BEEF LOAF,El Rancho – SMKT,155g,19.5,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,BEEF LOAF,Argentina,170g,25.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,BEEF LOAF,Purefoods,200g,24.9,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,VINEGAR – GIN AND PET BOTTLE,Datu Puti - White Vinegar,350ml,19.25,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,VINEGAR – GIN AND PET BOTTLE,Silver Swan Sukang Puti,350ml,19.25,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,VINEGAR – DOY / REFILL PACK,Silver Swan Sukang Puti Doy Pack,200ml,8.75,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,PATIS – GIN / PET BOTTLE,Lorins PET Bottle,350ml,27.5,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,PATIS – GIN / PET BOTTLE,Silver Swan Special,350ml,26.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,PATIS – GIN / PET BOTTLE,Datu Puti,350ml,28.5,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,PATIS – GIN / PET BOTTLE,Nelicom Special,350ml,32.75,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,PATIS – DOY PACK / BUDGET PACK,Lorins – Pouch,150ml,13.25,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,PATIS – DOY PACK / BUDGET PACK,Lorins – Budget Pouch,350ml,23.75,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,SOY SAUCE – GIN / PET BOTTLE,Datu Puti,350ml,21.25,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,SOY SAUCE – GIN / PET BOTTLE,Silver Swan,350ml,22.25,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,SOY SAUCE – DOY PACK / REFILL PACK,Silver Swan Doy Pack,200ml,12.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,TOILET SOAP,Green Cross (Pure Care),55g,15.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,TOILET SOAP,"Palmolive Naturals - Pinkish Glow (pink), Hydrating Glow (green), White with Natural Papaya, and White with Natural Milk",55g,17.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,TOILET SOAP,Safeguard Pure White,55g,22.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,TOILET SOAP,Green Cross (Pure Care),85g,25.75,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,TOILET SOAP,Safeguard Pure White,82g,31.25,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,TOILET SOAP,Green Cross (Pure Care),125g,37.25,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,TOILET SOAP,Safeguard Pure White,119g,49.0,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,BATTERIES,Energizer Max – Blister Pack of 4,AA,216.75,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
+2026-05-11,BATTERIES,Eveready Super Heavy Duty Black – Blister Pack of 2,D,81.75,DTI_SRP_BNPC_2026-05-11.pdf,0,DTI SRP BNPC bulletins,False,ph_reference_price
