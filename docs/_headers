@@ -1,0 +1,7 @@
+/*
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Cache-Control: public, max-age=0, must-revalidate
+
+/portfolio.json
+  Cache-Control: public, max-age=300
