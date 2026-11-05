@@ -8,7 +8,7 @@ The artifact compares a full-cost floor, target-margin price, competitor band, S
 
 ## Live site
 
-- GitHub Pages: `https://mrphilo420.github.io/smart-pricing/` after Pages is enabled
+- GitHub Pages: https://mrphilo420.github.io/smart-pricing/
 - Netlify: import this repository, or drag the `docs/` folder into Netlify
 
 ## What is in the artifact
