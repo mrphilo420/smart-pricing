@@ -1104,7 +1104,7 @@ function App() {
   return (
     <div className="min-h-screen bg-[#f4efe4] text-[#1f2a24]">
       <div className="mx-auto flex min-h-screen max-w-[1480px] flex-col lg:flex-row">
-        <aside className="w-full shrink-0 border-b border-[#1f2a24]/10 bg-[#efe9df] lg:w-[300px] xl:w-[340px] lg:border-b-0 lg:border-r">
+        <aside className="sidebar-scroll w-full shrink-0 border-b border-[#1f2a24]/10 bg-[#efe9df] lg:sticky lg:top-0 lg:h-screen lg:w-[300px] lg:overflow-y-auto lg:overscroll-contain lg:border-b-0 lg:border-r xl:w-[340px]">
           <div className="p-5">
             <div className="flex items-start justify-between gap-3">
               <div>
